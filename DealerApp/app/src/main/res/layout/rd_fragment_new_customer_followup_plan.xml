@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForDatePicker
+        android:id="@+id/new_customer_followup_plan_date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForRecycleView
+        android:id="@+id/new_customer_followup_plan_method_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForEditTextWithMic
+        android:id="@+id/new_customer_followup_plan_plan_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:id="@+id/new_yellow_card_info_table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="2">
+
+            <com.svw.dealerapp.ui.widget.RdCustomItemViewForRecycleView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id/new_customer_step_2_intention_car_type_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TableRow
+                android:id="@+id/new_customer_step_2_intention_outer_color_tr"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_marginLeft="@dimen/custom_item_star_left_margin"
+                    android:layout_marginRight="@dimen/custom_item_star_right_margin"
+                    android:text="@string/new_customer_mandatory"
+                    android:textColor="#EA4F44"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/new_customer_intention_outer_color" />
+
+                <TextView
+                    android:id="@+id/new_customer_step_2_intention_outer_color_tv"
+                    style="@style/NewCardRightTextStyle.TextView"
+                    android:layout_column="2"
+                    android:hint="@string/new_customer_intention_outer_color_hint" />
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="48dp" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:background="@color/new_yellow_card_divide_line" />
+
+            <TableRow
+                android:id="@+id/new_customer_step_2_intention_inner_color_tr"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_marginLeft="@dimen/custom_item_star_left_margin"
+                    android:layout_marginRight="@dimen/custom_item_star_right_margin"
+                    android:text="@string/new_customer_mandatory"
+                    android:textColor="#EA4F44"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/new_customer_intention_inner_color" />
+
+                <TextView
+                    android:id="@+id/new_customer_step_2_intention_inner_color_tv"
+                    style="@style/NewCardRightTextStyle.TextView"
+                    android:layout_column="2"
+                    android:ellipsize="end"
+                    android:hint="@string/new_customer_intention_inner_color_hint" />
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="48dp" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:background="@color/new_yellow_card_divide_line" />
+
+            <com.svw.dealerapp.ui.widget.RdCustomItemViewForOptionalPackage
+                android:id="@+id/new_customer_step_2_intention_package"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TableRow android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_marginLeft="@dimen/custom_item_star_left_margin"
+                    android:layout_marginRight="@dimen/custom_item_star_right_margin"
+                    android:text="@string/new_customer_mandatory"
+                    android:textColor="#EA4F44"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/new_customer_intention_budget" />
+
+                <TextView
+                    android:text="@string/new_customer_intention_budget_unit"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <View android:layout_height="48dp" />
+            </TableRow>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/new_customer_step_2_intention_budget_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cellMode="other"
+                    app:cells="10"
+                    app:hideProgressHint="true"
+                    app:lineColorEdge="#CFD7D9"
+                    app:lineColorSelected="@color/new_yellow_card_dark_blue"
+                    app:markTextArray="@array/moneyArray"
+                    app:max="55"
+                    app:min="5"
+                    app:reserve="5"
+                    app:seekBarHeight="4dp"
+                    app:seekBarMode="range"
+                    app:seekBarResId="@mipmap/new_customer_dot"
+                    app:textPadding="8dp" />
+
+                <com.jaygoo.widget.RangeSeekBar
+                    android:id="@+id/new_customer_step_2_intention_budget_gray_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:cellMode="other"
+                    app:cells="10"
+                    app:hideProgressHint="true"
+                    app:lineColorEdge="#CFD7D9"
+                    app:lineColorSelected="@color/customer_detail_header_gray"
+                    app:markTextArray="@array/moneyArray"
+                    app:max="55"
+                    app:min="5"
+                    app:reserve="5"
+                    app:seekBarHeight="4dp"
+                    app:seekBarMode="range"
+                    app:seekBarResId="@mipmap/new_customer_no_owner_dot"
+                    app:textPadding="8dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:background="@color/new_yellow_card_divide_line" />
+
+            <TableRow android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_column="0"
+                    android:layout_marginLeft="@dimen/custom_item_star_left_margin"
+                    android:layout_marginRight="@dimen/custom_item_star_right_margin"
+                    android:text="@string/new_customer_mandatory"
+                    android:textColor="#EA4F44"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:layout_column="1"
+                    android:text="@string/new_customer_intention_other_requirement_title" />
+
+                <View android:layout_height="48dp" />
+            </TableRow>
+        </TableLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/new_customer_step_2_intention_require_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="-15dp"
+            android:overScrollMode="never" />
+
+    </LinearLayout>
+
+    <com.svw.dealerapp.ui.widget.InterceptTouchCoverView
+        android:id="@+id/itv_cover_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,800 @@
+<resources>
+    <string name="app_name">SVW e-Sales</string>
+
+
+    <!--for demo start-->
+    <string name="action_settings">Setting</string>
+    <string name="action_about">About</string>
+    <string name="action_search">Search</string>
+    <string name="action_notice">Notification</string>
+
+    <string name="menu_recommend">essence</string>
+    <string name="menu_hot">vote</string>
+    <string name="menu_newest">recent</string>
+    <string name="menu_jobs">cool work</string>
+    <string name="menu_wiki">Community WIKI</string>
+    <string name="menu_nobody">no response</string>
+
+    <string name="menu_vote">favorite topics</string>
+    <string name="menu_topic">share topics</string>
+    <string name="menu_revert">response</string>
+    <string name="menu_change_theme">change topics</string>
+    <string name="menu_login_help">login help</string>
+
+    <string name="dialog_exit_login">Are you sure to exit?</string>
+    <string name="dialog_exit_negative_text">Let me see.</string>
+    <string name="dialog_exit_positive_text">Bye bye</string>
+    <!--for demo end-->
+
+    <!-- 网络请求异常通用 start-->
+    <string name="empty_data_home">no reseveration today</string>
+    <string name="empty_data_traffic">"no visitors' information"</string>
+    <string name="empty_data_yellow_card">no opportunity information</string>
+    <string name="empty_data_task_traffic">no visitors task today</string>
+    <string name="empty_data_task_e_commerce">no e-commerce task today</string>
+    <string name="empty_data_task_follow">no task to follow today</string>
+    <string name="empty_data_schedule_wait">no waiting schedule today</string>
+    <string name="empty_data_schedule_complete">no completed chedule today</string>
+    <string name="empty_data_approve_wait">no waiting approval today</string>
+    <string name="empty_data_approve_complete">no completed approval today</string>
+    <string name="empty_data_notification">no notification</string>
+    <string name="empty_order_customer">no order customer</string>
+    <string name="empty_deal_customer">no deal customer</string>
+    <string name="empty_sleep_customer">no sleeping customer</string>
+    <string name="empty_failed_customer">no failed customer</string>
+    <string name="empty_optional_package">no optional package</string>
+    <string name="empty_data">no data</string>
+    <string name="no_more_data">no more data</string>
+    <string name="all_is_load">all is done</string>
+    <string name="network_error">network error</string>
+    <string name="server_error">server error</string>
+    <string name="timeout_error">timeout error</string>
+    <string name="token_error">token error</string>
+    <string name="pending_status">pending status</string>
+    <!-- 网络请求异常通用 end-->
+
+    <!--首页 start-->
+    <string name="main_index_page">Homepage</string>
+    <string name="main_resource">Resources</string>
+    <string name="main_kpi">Reports</string>
+    <string name="main_mine">mine</string>
+    <!--首页 end-->
+
+    <!--home start-->
+    <string name="home_schedule_item">Appointments</string>
+    <string name="home_today_indicator">today indicator</string>
+    <string name="home_schedule_finish">schedule finished</string>
+    <string name="home_schedule_check_yellow_card">check yellow card</string>
+    <string name="home_header_e_commerce">e-commerce</string>
+    <string name="home_header_approve">approve</string>
+    <string name="home_header_traffic">Traffic</string>
+    <string name="home_header_follow_up">Follow-ups</string>
+    <string name="home_create_traffic_title">create traffic title</string>
+    <string name="home_create_traffic_source_type">create traffic source type</string>
+    <string name="home_create_traffic_media">media</string>
+    <string name="home_create_traffic_source_type_hint">create traffic source type hint</string>
+    <string name="home_create_traffic_media_hint">select media</string>
+    <string name="home_create_traffic_info">Customer info</string>
+    <string name="home_create_traffic_info_name">Name</string>
+    <string name="home_create_traffic_info_gender">Gender</string>
+    <string name="home_create_traffic_info_phone">Mobile</string>
+    <string name="home_create_traffic_info_activity">activity</string>
+    <string name="home_create_traffic_info_select_activity">select activity</string>
+    <string name="home_create_traffic_get_activity_time_out">activity timeout</string>
+    <string name="home_create_traffic_info_is_friend">recommended by friends</string>
+    <string name="home_create_traffic_info_rec_name">"recommender's name"</string>
+    <string name="home_create_traffic_info_rec_mobile">"recommender's mobile"</string>
+    <string name="home_create_traffic_info_desc">remarks</string>
+    <string name="home_create_traffic_info_male">Male</string>
+    <string name="home_create_traffic_info_female">Female</string>
+    <string name="home_create_traffic_info_name_hint">Please fill in the customer name</string>
+    <string name="home_create_traffic_info_gender_hint">Please select the gender</string>
+    <string name="home_create_traffic_info_phone_hint">Please fill in the mobile number</string>
+    <string name="home_create_traffic_info_rec_nome_hint">Please fill in existing SVW-owners name</string>
+    <string name="home_create_traffic_info_rec_mobile_hint">please fill in mobile</string>
+    <string name="home_create_traffic_success">Traffic created successfully</string>
+    <string name="home_create_traffic_fail">Request failed</string>
+    <string name="home_create_traffic_timeout">Timeout</string>
+    <string name="home_create_traffic_desc_hint">Input description</string>
+    <string name="home_create_traffic_name_empty_tip">Please fill in the name</string>
+    <string name="home_create_traffic_phone_empty_tip">Please fill in the mobile </string>
+    <string name="home_create_traffic_phone_error_tip">Please fill in the correct mobile</string>
+    <string name="home_create_traffic_gender_empty_tip">Please select the gender</string>
+    <string name="home_create_traffic_remark_empty_tip">Please fill in description</string>
+    <string name="home_create_traffic_rec_name_empty_tip">Please fill in existing SVW-owners name</string>
+    <string name="home_create_traffic_rec_mobile_empty_tip">Please fill in the name</string>
+    <string name="home_create_traffic_rec_mobile_error_tip">Please fill in the correct mobile</string>
+    <string name="home_create_traffic_rec_car_empty_tip">please fill in car model code</string>
+    <string name="home_create_traffic_rec_car_error_tip">please fill in correct car model code</string>
+    <string name="home_create_traffic_rec_car_series_empty_tip">please fill in car series code</string>
+    <string name="home_create_traffic_check_repeat">check</string>
+    <string name="home_create_traffic_check_repeat_failed">ckeck repeat failed</string>
+    <string name="home_create_traffic_check_repeat_time_out">check repeat time out</string>
+    <string name="home_create_traffic_check_repeat_no_repeat">no repeat</string>
+    <string name="home_create_traffic_check_repeat_tip_1">there are </string>
+    <string name="home_create_traffic_check_repeat_tip_2">repeating records</string>
+    <string name="home_delay_tip_one">You have </string>
+    <string name="home_delay_tip_two">overdue recrds</string>
+    <string name="home_auto_play_due_date">up to now</string>
+    <string name="home_auto_play_rate">completion rete</string>
+    <string name="home_auto_play_month_deal">deals done</string>
+    <string name="home_auto_play_new_order">new order</string>
+    <string name="home_auto_play_drive">drive</string>
+    <string name="home_auto_play_new_cus">new customer</string>
+    <string name="home_auto_play_order_done">orders done</string>
+    <string name="home_auto_play_cus_transfer">opportunity transfered</string>
+    <!--home end-->
+
+    <!-- 待处理线索 start -->
+    <string name="to_deal_leads_title">Leads pending follow up</string>
+    <!-- 待处理线索 end -->
+
+    <!-- 上下拉列表控件 start-->
+    <string name="pull_down_to_refresh">Pull to refresh</string>
+    <string name="release_to_refresh">Release to refresh</string>
+    <!-- 上下拉列表控件 end-->
+
+    <!-- 资源页 start -->
+    <string name="resource_tab_yellow_card">Opportunities</string>
+    <string name="resource_tab_traffic">Traffic</string>
+    <string name="resource_tab_failed">failed customers</string>
+    <string name="resource_tab_sleep">sleeping customers</string>
+    <string name="resource_select_filter_cancel">Cancel</string>
+    <string name="resource_select_filter_confirm">Confirm</string>
+    <string name="resource_select_filter_reset">Reset</string>
+    <string name="task_tab_schedule_item_empty">no schedule</string>
+    <!-- 资源页－流量 start -->
+    <string name="traffic_back_view_create_card">New</string>
+    <string name="traffic_back_view_follow">Follow-up</string>
+    <string name="traffic_back_view_can_not_create_card">Invalid</string>
+    <string name="traffic_back_view_check">View</string>
+    <string name="can_not_create_reason">Reason for invalid</string>
+    <string name="can_not_create_no_info">No information</string>
+    <string name="can_not_create_no_info_detail">No valid contact information from the customer</string>
+    <string name="can_not_create_after_sale">After-sales inquiry</string>
+    <string name="can_not_create_after_sale_detail">After-sales inquiry only</string>
+    <string name="can_not_create_no_buy">Not a potential buyer</string>
+    <string name="can_not_create_no_buy_detail">Customer is not a potential buyer</string>
+    <string name="can_not_create_dialog_post">Submit</string>
+    <string name="can_not_create_post_success">Status updated successfully</string>
+    <string name="can_not_create_post_fail">Fail to update status</string>
+    <string name="can_not_create_no_select_tip">Please select the reasons</string>
+    <string name="traffic_check_existed_yc_fail">Unable to get the card information</string>
+    <string name="traffic_get_yellow_card_info_fail">Unable to get the card information</string>
+    <!-- 资源页－流量 end -->
+    <!-- 资源页－黄卡 start -->
+    <string name="yellow_back_view_vip">VIP customer</string>
+    <string name="yellow_back_view_follow">Follow-up</string>
+    <string name="yellow_back_view_transfer">Transfer opportunities</string>
+    <string name="yellow_vip_dialog_title">VIP customer</string>
+    <string name="yellow_vip_dialog_tip">Do you confirm to mark the user as a VIP customer</string>
+    <string name="yellow_call_dialog_title">Dail</string>
+    <string name="yellow_set_vip_success">Mark as VIP customer successfully</string>
+    <string name="yellow_set_vip_fail">Fail to mark as VIP customer</string>
+    <string name="yellow_vip_dialog_cancel_tip">Cancel to mark this as a VIP customer</string>
+    <string name="yellow_set_vip_cancel_success">Successfully remove this as VIP customer</string>
+    <string name="yellow_set_vip_cancel_fail">Fail to remove the VIP customer</string>
+    <string name="yellow_phone_number_empty">No contact information left from the customer</string>
+    <string name="yellow_back_view_active">active</string>
+    <string name="yellow_active_success">active successfully</string>
+    <string name="yellow_active_fail">active defeat</string>
+    <string name="yellow_active_tip">Are you sure to activate sleeping customers?</string>
+    <string name="yellow_active_fail_tip">Are you sure to activate failed customers？</string>
+    <string name="yellow_car_series_empty">no car series</string>
+    <string name="yellow_card_sleep_activate">activate sleep</string>
+    <string name="yellow_card_defeat_activate">activate defeat</string>
+    <string name="yellow_card_create_action">建卡</string>
+    <string name="yellow_card_next_follow_up">下次跟进</string>
+    <string name="yellow_card_has_drive">已试乘试驾</string>
+    <string name="yellow_card_consultant">顾问：</string>
+    <string name="yellow_card_wait_approve">待审批</string>
+    <string name="yellow_card_update">更新</string>
+    <string name="yellow_card_empty">无</string>
+    <!-- 资源页－黄卡 end -->
+    <!-- 资源页－成交客户 start -->
+    <string name="order_customer_cancel_success">cancel order successfully</string>
+    <string name="order_customer_cancel_fail">cancel order failed</string>
+    <string name="order_customer_cancel_dialog_title">prompt</string>
+    <string name="order_customer_cancel_dialog_content">Are you sure to cancel order?</string>
+    <string name="order_customer_cancel_dialog_no_order">you cannot cancel it before filling out this table</string>
+    <string name="order_customer_cancel_dialog_cancel_order">you cannot cacel it for it has been cancelled</string>
+    <string name="order_customer_canceling_otd_order">OTD order cancel is being proceeded.</string>
+    <string name="order_customer_tab_title">ordered customer</string>
+    <string name="order_customer_cancel_order">cancel order</string>
+    <string name="order_customer_cancel_otd_order">cancel \nOTD order</string>
+    <string name="order_customer_cancel_empty">There is no avaiable order for this customer.</string>
+    <string name="order_customer_status_order">下订</string>
+    <!-- 资源页－成交客户 end -->
+    <!-- 资源页－流量－筛选 start -->
+    <string name="resource_traffic_filter_title">Traffic filter</string>
+    <string name="resource_yellow_filter_title">Opportunity filter</string>
+    <string name="resource_order_filter_title">filter order</string>
+    <string name="resource_deal_filter_title">filter successfulr order</string>
+    <string name="resource_filter_time">Time</string>
+    <string name="resource_filter_all">All </string>
+    <string name="resource_filter_today">Today</string>
+    <string name="resource_filter_three_day">Past 3 days</string>
+    <string name="resource_filter_seven_day">Past 7 days</string>
+    <string name="resource_filter_week">Past 1 week</string>
+    <string name="resource_filter_status">Status</string>
+    <string name="resource_filter_create">Card created</string>
+    <string name="resource_filter_waiting">Pending</string>
+    <string name="resource_filter_invalid">Fail to process</string>
+    <string name="resource_filter_get_car_empty_data">No matched car type</string>
+    <!-- 资源页－流量－筛选 end -->
+    <!-- 资源页－黄卡－筛选 start -->
+    <string name="resource_yellow_filter_source">Sources</string>
+    <string name="resource_yellow_filter_source_all">All </string>
+    <string name="resource_yellow_filter_source_e_commerce">E-commerce</string>
+    <string name="resource_yellow_filter_source_internet">Internet</string>
+    <string name="resource_yellow_filter_source_phone">Call-in</string>
+    <string name="resource_yellow_filter_source_shop">Traffic</string>
+    <string name="resource_yellow_filter_source_activity">Events</string>
+    <string name="resource_yellow_filter_create_time">Creation time</string>
+    <string name="resource_yellow_filter_create_time_all">All </string>
+    <string name="resource_yellow_filter_follow_result">Follow up result</string>
+    <string name="resource_yellow_filter_status">opportunity status</string>
+    <string name="resource_yellow_filter_follow_result_all">All </string>
+    <string name="resource_yellow_filter_follow_result_not_arrive">No-show</string>
+    <string name="resource_yellow_filter_follow_result_arrive">Walk-in</string>
+    <string name="resource_yellow_filter_follow_result_drive">Test drive</string>
+    <string name="resource_yellow_filter_follow_result_order">Order</string>
+    <string name="resource_yellow_filter_follow_result_success">Sold</string>
+    <string name="resource_yellow_filter_follow_result_delivery">Delivery</string>
+    <string name="resource_yellow_filter_follow_result_fail">Defeat</string>
+    <string name="resource_yellow_filter_follow_result_sleep">Dormant</string>
+    <string name="resource_yellow_filter_customer_rank">Priority</string>
+    <string name="resource_yellow_filter_customer_rank_h">H</string>
+    <string name="resource_yellow_filter_car_type">Preference</string>
+    <string name="resource_yellow_filter_only_vip">Show VIP only</string>
+    <string name="resource_yellow_filter_sales">by sales consultant</string>
+    <string name="resource_yellow_filter_series">by car series</string>
+    <string name="resource_yellow_invalid_car_code">Please enter the correct vehicle code</string>
+    <string name="resource_yellow_match_car_type_success">Model match successfully</string>
+    <string name="resource_yellow_match_car_type_fail">Fail to match vehicle model</string>
+    <string name="resource_yellow_car_type_input_tip">Please enter vehicle code</string>
+    <string name="resource_yellow_filter_time_pick_start">Select starting time</string>
+    <string name="resource_yellow_filter_time_pick_end">Select end time</string>
+    <string name="resource_yellow_filter_time_error">endtime must be later than start time</string>
+    <!-- 资源页－黄卡－筛选 end -->
+    <!-- 资源页－黄卡－转移 start -->
+    <string name="resource_yellow_transfer_search">Search</string>
+    <string name="resource_yellow_transfer_title">Transfer opportunities</string>
+    <string name="resource_yellow_transfer_dialog_title">Customer transfer</string>
+    <string name="resource_yellow_transfer_dialog_tip_one">Confirm to transfer\n</string>
+    <string name="resource_yellow_transfer_dialog_tip_two">\nto</string>
+    <string name="resource_yellow_transfer_dialog_tip_three">Sales</string>
+    <string name="resource_yellow_transfer_not_select_sales">Please select the Sales</string>
+    <string name="resource_yellow_transfer_fail">Fail to transfer</string>
+    <string name="resource_yellow_transfer_success">Transfer successfully</string>
+    <!-- 资源页－黄卡－转移 end -->
+    <!-- 资源页－黄卡－销售顾问列表 start -->
+    <string name="resource_sales_filter_title">select sales consultant</string>
+    <string name="resource_sales_filter_all">all</string>
+    <string name="resource_sales_filter_empty_tip">please select sales consultant firstly!</string>
+    <!-- 资源页－黄卡－销售顾问列表 end -->
+    <!-- 资源页－车系列表 start -->
+    <string name="resource_series_filter_title">select car series</string>
+    <string name="resource_series_filter_all">all</string>
+    <!-- 资源页－车系列表 end -->
+    <!-- 资源页－黄卡－搜索 start -->
+    <string name="resource_yellow_search_title">search opportunities</string>
+    <string name="resource_yellow_search_hint">请输入电话号码或姓名</string>
+    <string name="resource_yellow_search_cancel">Cancel</string>
+    <string name="resource_yellow_search_result_one">A total of&#160;</string>
+    <string name="resource_yellow_search_result_two">&#160;records</string>
+    <string name="resource_yellow_search_content_empty">Please enter the search criteria</string>
+    <string name="resource_yellow_search_pop_other">This yellow card belongs to other sales concultant \n cannot creat connection.</string>
+    <string name="resource_yellow_search_pop_fail">Opportunities of this yellow card is defeat \n cannot creat connection</string>
+    <string name="resource_yellow_search_pop_sleep">Opportunities of this yellow card is sleeping \n cannot creat connection</string>
+    <string name="resource_yellow_search_pop_detail_bt">see details</string>
+    <string name="resource_yellow_search_pop_active_bt">check and activate</string>
+    <string name="resource_yellow_search_pop_relate">sure to connect and follow?</string>
+    <string name="resource_yellow_search_pop_relate_sucess">This lead has been connected to yellow card successfully</string>
+    <string name="resource_yellow_search_pop_relate_fail">This lead failed to connect with yellow card \n add a new follow-up please</string>
+    <!-- 资源页－黄卡－转移 end -->
+    <!-- 资源页－订单 start -->
+    <string name="resource_order_cus_delivery_time">estimated dilivery time:</string>
+    <string name="resource_order_cus_delivery_time_empty">estimated dilivery time:none</string>
+    <!-- 资源页－订单 end -->
+    <!-- 资源页－成交 start -->
+    <string name="resource_deal_cus_delivery_time">estimated dilivery time</string>
+    <string name="resource_deal_cus_delivery_time_empty">dilivery time: none</string>
+    <string name="resource_deal_cus_deal">开票</string>
+    <!-- 资源页－成交 end -->
+    <!-- 资源页－战败 start -->
+    <string name="resource_deal_cus_failed_time">failed time</string>
+    <string name="resource_deal_cus_failed_reason">reason for failure</string>
+    <string name="resource_deal_cus_failed_active">预计激活</string>
+    <string name="resource_deal_cus_failed_action">战败</string>
+    <!-- 资源页－战败 end -->
+    <!-- 资源页－休眠 start -->
+    <string name="resource_deal_cus_sleep_time">ending sleeping time</string>
+    <string name="resource_deal_cus_sleep_reason">sleeping reason:</string>
+    <string name="resource_deal_cus_sleep_action">休眠</string>
+    <!-- 资源页－休眠 end -->
+    <!-- 资源页－成交客户－筛选 start -->
+    <string name="resource_deal_cus_filter_title">deals filter</string>
+    <string name="resource_deal_cus_filter_only_self"> only show myself</string>
+    <string name="resource_deal_cus_filter_delivery_time">delivery time</string>
+    <string name="resource_deal_order_filter_delivery_time">estimated delivery time</string>
+    <!-- 资源页－成交客户－筛选 end -->
+    <!-- 资源页－战败客户－筛选 start -->
+    <string name="resource_failed_cus_filter_title">failure filter</string>
+    <string name="resource_failed_cus_filter_time">failure time</string>
+    <string name="resource_failed_cus_filter_reason">failure reason</string>
+    <string name="resource_failed_cus_filter_reason_1">same products</string>
+    <string name="resource_failed_cus_filter_reason_2">competitive products</string>
+    <!-- 资源页－战败客户－筛选 end -->
+    <!-- 资源页－休眠客户－筛选 start -->
+    <string name="resource_sleep_cus_filter_title">sleep filter</string>
+    <string name="resource_sleep_cus_filter_sleep_time">sleep time</string>
+    <string name="resource_sleep_cus_filter_sleep_end_time">end of sleep time</string>
+    <!-- 资源页－休眠客户－筛选 end -->
+    <!-- 资源页 end -->
+
+    <!--新潜客开始-->
+    <string name="new_customer_cancel_tip">This yellow card is not completed\ndo you confirm to exit and discard?</string>
+    <string name="new_customer_cancel_confirm">Discard</string>
+    <string name="new_customer_cancel_cancel">Cancel</string>
+    <string name="new_customer_step_3_cancel_tip">Last record has not been created yet \n sure to exit?</string>
+    <string name="new_customer_step_4_cancel_tip">This records will be followed next time \n sure to exit? </string>
+    <string name="new_customer_cancel_exit">退出</string>
+    <string name="new_customer_other_reason_title">Please enter the reason</string>
+    <string name="new_customer_other_reason">Please enter the reason</string>
+    <string name="new_customer_asleep_reason_title">Dormant reason</string>
+    <string name="new_customer_asleep_reason_hint">Please enter dormant reason</string>
+    <string name="new_customer_validation_hint">Please complete the required items</string>
+    <string name="new_customer_quick_create">Quick creation</string>
+    <string name="new_customer_continue">Continue</string>
+    <string name="new_customer_next">Next</string>
+    <string name="new_customer_basic_info_header">Basic information</string>
+    <string name="new_customer_mandatory">*</string>
+    <string name="new_customer_name">Name</string>
+    <string name="new_customer_name_hint">Please fill in name</string>
+    <string name="new_customer_gender">Gender</string>
+    <string name="new_customer_gender_male">Male</string>
+    <string name="new_customer_gender_female">Female</string>
+    <string name="new_customer_mobile">Telephone</string>
+    <string name="new_customer_mobile_hint">Mobile</string>
+    <string name="new_customer_age">Age</string>
+    <string name="new_customer_age_hint">Please select age</string>
+    <string name="new_customer_source">Sources</string>
+    <string name="new_customer_source_hint">Please select sources</string>
+    <string name="new_customer_media">Media</string>
+    <string name="new_customer_media_hint">Please select media</string>
+    <string name="new_customer_recommended_by_friend">recommended by friends?</string>
+    <string name="new_customer_jipan_customer">"referer's name"</string>
+    <string name="new_customer_jipan_customer_hint">"please fill in referer's name"</string>
+    <string name="new_customer_jipan_customer_contact">"referer's contact"</string>
+    <string name="new_customer_jipan_customer_contact_hint">"please fill in referer's contact"</string>
+    <string name="new_customer_requirements_header">Product requirement</string>
+    <string name="new_customer_property">Purchase distinction</string>
+    <string name="new_customer_property_hint">Please select</string>
+    <string name="new_customer_purpose">Purchase motivation</string>
+    <string name="new_customer_purpose_hint">Please select</string>
+    <string name="new_customer_wanted_car_type">Vehicle model preference</string>
+    <string name="new_customer_wanted_car_type_hint">Enter model</string>
+    <string name="new_customer_opp_level_header">Priority</string>
+    <string name="new_customer_opp_level_header_as_followup">Reason to follow-up</string>
+    <string name="new_customer_opp_level_header_as_change_level">Priority change (optional)</string>
+    <string name="new_customer_opp_level_title_as_change_level">Change priority</string>
+    <string name="new_customer_opp_level_hint">Please select </string>
+    <string name="new_customer_opp_level_key_customer">VIP customer</string>
+    <string name="new_customer_opp_level_followup_reason_title">Reason to follow-up</string>
+    <string name="new_customer_opp_level_followup_reason_hint">Please refer to information, demand, purchasing power</string>
+    <string name="new_customer_step_1_followup_plan_header">Follow-up plan</string>
+    <string name="new_customer_step_1_followup_plan_date">Plan date</string>
+    <string name="new_customer_step_1_followup_plan_date_hint">Please select plan date</string>
+    <string name="new_customer_current_car_header">Basic information</string>
+    <string name="new_customer_current_car_type">Current vehicle model</string>
+    <string name="new_customer_current_car_type_hint">Enter vehicle model</string>
+    <string name="new_customer_current_car_bought_year">Purchase time</string>
+    <string name="new_customer_current_car_bought_year_hint">Please select</string>
+    <string name="new_customer_current_car_mileage">Mileage(Unit: km)</string>
+    <string name="new_customer_intention_header">Product description</string>
+    <string name="new_customer_intention_pay_method">Payment intention</string>
+    <string name="new_customer_intention_pay_method_hint">Please select payment intention</string>
+    <string name="new_customer_intention_budget">Budget(Unit: 10000)</string>
+    <string name="new_customer_intention_budget_unit">(Unit: 10000)</string>
+    <string name="new_customer_intention_package">Optional package</string>
+    <string name="new_customer_intention_package_hint">Placeholder</string>
+    <string name="new_customer_intention_outer_color">Appearance color</string>
+    <string name="new_customer_intention_outer_color_hint">Please select</string>
+    <string name="new_customer_intention_inner_color">Interior color</string>
+    <string name="new_customer_intention_inner_color_hint">Please select</string>
+    <string name="new_customer_intention_other_requirement_title">Others</string>
+    <string name="new_customer_intention_other_requirement_hint">Please enter</string>
+    <string name="new_customer_intention_other_header">others(optional)</string>
+    <string name="new_customer_intention_other_info_method_title">Information source</string>
+    <string name="new_customer_intention_other_info_method_hint">Please enter other information source</string>
+    <string name="new_customer_intention_other_wechat">Wechat account</string>
+    <string name="new_customer_followup_record_header">First contact result</string>
+    <string name="new_customer_contact_method">Contact method</string>
+    <string name="new_customer_contact_method_hint">Please select </string>
+    <string name="new_customer_contact_result">Contact result</string>
+    <string name="new_customer_contact_result_hint">Please select </string>
+    <string name="new_customer_failure_result_title">Defeat reason</string>
+    <string name="new_customer_failure_result_hint">Please select </string>
+    <string name="new_customer_failure_competitor_series_other_hint">please fill in car model</string>
+    <string name="new_customer_asleep_result_title">Dormant reason</string>
+    <string name="new_customer_asleep_finish_time">end of sleep time</string>
+    <string name="new_customer_asleep_result_hint">Please select </string>
+    <string name="new_customer_asleep_finish_time_hint">Please choose the end of sleep time.</string>
+    <string name="new_customer_asleep_time_error_tip">End of sleep time must be later than start of sllep time.</string>
+    <string name="new_customer_asleep_time_error_tip2">End of sleep time must be within 3 month</string>
+    <string name="new_customer_remark">Comment</string>
+    <string name="new_customer_remark_hint">Add comment</string>
+    <string name="new_customer_remark_detail">Details</string>
+    <string name="new_customer_remark_detail_hint">Add details</string>
+    <string name="new_customer_create_complete">Creation finished</string>
+    <string name="new_customer_next_followup_plan_title">Next follow-up plan</string>
+    <string name="new_customer_next_followup_date">Next follow-up plan</string>
+    <string name="new_customer_next_followup_date_hint">Please select</string>
+    <string name="new_customer_next_followup_contact_result">Contact result</string>
+    <string name="new_customer_next_followup_contact_result_hint">Please select</string>
+    <string name="new_customer_next_followup_contact_plan">Follow-up plan</string>
+    <string name="new_customer_next_followup_contact_plan_hint">Please fill in follow-up plan</string>
+    <string name="new_customer_next_followup_contact_method">Follow-up method</string>
+    <string name="new_customer_next_followup_contact_method_plan">Please select follow-up method</string>
+    <string name="new_customer_appointment_title">New appointment (optional)</string>
+    <string name="new_customer_appointment_date">Date</string>
+    <string name="new_customer_appointment_date_hint">Please select appointment date</string>
+    <string name="new_customer_appointment_time">Time</string>
+    <string name="new_customer_appointment_time_hint">Please select appointment time</string>
+    <string name="new_customer_appointment_type">Appointment</string>
+    <string name="new_customer_appointment_type_hint">Please select</string>
+    <string name="new_customer_membership_hint">please remind customers to participate in SVW membership plan!</string>
+    <string name="customer_detail_header_followup_status_1">Invite</string>
+    <string name="customer_detail_header_followup_status_2">Test drive</string>
+    <string name="customer_detail_header_followup_status_3">Order</string>
+    <string name="customer_detail_header_followup_status_4">Delivery</string>
+    <string name="customer_detail_appointments_header">Current appointment</string>
+    <string name="customer_detail_appointments_empty">No appointment</string>
+    <string name="customer_detail_followups_header">Follow-up records</string>
+    <string name="customer_detail_followups_to_be_followuped">Pending follow-up</string>
+    <string name="customer_detail_wrong_date">Follow-up time must be after today or later than default follow-up date.</string>
+    <string name="customer_detail_wrong_date_step_four">Please change follow-up time into today or tomorrow</string>
+    <string name="customer_detail_title_add_followup_record">this follow-up record</string>
+    <string name="customer_detail_title_info">basic customer information</string>
+    <string name="customer_detail_title_requirements">product requirement</string>
+    <string name="customer_detail_title_followup_reason">reason for follow-up</string>
+    <string name="customer_detail_title_remark">remark</string>
+    <string name="customer_detail_remark_hint">please fill in remark</string>
+    <string name="customer_detail_remark_operator">operator</string>
+    <string name="customer_detail_remark_success">submit remark successfully</string>
+    <string name="customer_detail_remark_fail">submit remark failed</string>
+    <string name="customer_detail_followup_pending">pending</string>
+    <string name="customer_detail_followup_approved">approved</string>
+    <string name="customer_detail_followup_rejected">refused</string>
+    <string name="customer_detail_car_type_try_again">Reenter</string>
+    <string name="customer_detail_car_type_try_again_hint">Invalid car type ID</string>
+    <string name="customer_detail_add_followup_record_back_hint">This followup has not been recorded \n sure to exit and discard?</string>
+    <string name="new_customer_wrong_mobile_format">Contact is not correct!</string>
+    <string name="new_customer_jipan_wrong_mobile_format">"wrong mobile format of referer's contact"</string>
+    <string name="add_followup_record_invalid_appointment_time">Appontment time must be later than now!</string>
+    <string name="public_submit">submit</string>
+    <string name="double_create_order">The record of this opportunity is existing. \n cancel order firstly!</string>
+    <string name="double_followup_order">Please fill in order information \n before submitting followup</string>
+    <string name="otd_canceling_followup">OTD order is being cancelled. Please waiting for a moment.</string>
+    <string name="order_pending_followup">paying bill. Please waiting for a moment.</string>
+    <string name="new_customer_reference_name_mobile_null_message">"Failed. \n Please fill in referer's name and contact"</string>
+    <string name="new_customer_basic_name_mobile_null_message">"Failed. \n Please fill in name and contact"</string>
+    <!--新潜客结束-->
+
+    <!--订单开始-->
+    <string name="order_submit_order">submit</string>
+    <string name="order_save_order">save</string>
+    <string name="order_report_otd">report OTD</string>
+    <string name="order_cancel_order">cancel order</string>
+    <string name="order_cancel_otd_order">cancel OTD order</string>
+    <string name="order_back_hint">This orer has not been created successfully \n sure to exit and discard?</string>
+    <string name="order_cancel_hint">cancel order?</string>
+    <string name="public_yes">yes</string>
+    <string name="public_no">no</string>
+    <string name="public_skip">skip</string>
+    <string name="public_cancel">cancel</string>
+    <string name="order_membership_validation_hint">Please fill in at least one item from contact, VIN of car owner and membership number.</string>
+    <string name="order_membership_validation_hint2">"Please fill in at least one item from refer's contact, refer's VIN and membership number."</string>
+    <string name="order_membership_validation_hint0">姓名不能为空</string>
+    <string name="otd_order_status">OTD status</string>
+    <string name="order_create_opp_name">潜客姓名</string>
+    <string name="order_create_opp_mobile">潜客电话</string>
+    <string name="order_create_owner_name">车主姓名</string>
+    <string name="order_create_owner_name_hint">请输入车主姓名</string>
+    <string name="order_create_owner_mobile">车主电话</string>
+    <string name="order_create_owner_mobile_hint">请输入车主电话</string>
+    <string name="order_create_owner_address">地址</string>
+    <string name="order_create_owner_address_hint">请输入地址</string>
+    <string name="order_create_owner_email">电子邮件</string>
+    <string name="order_create_owner_email_hint">请输入电子邮件</string>
+    <string name="order_create_owner_certificate_type">证件类型</string>
+    <string name="order_create_owner_certificate_type_hint">请选择证件类型</string>
+    <string name="order_create_owner_certificate_id">证件号码</string>
+    <string name="order_create_owner_certificate_id_hint">请输入证件号码</string>
+    <string name="order_create_owner_gender">性别</string>
+    <string name="order_create_owner_customer_type">客户类型</string>
+    <string name="order_create_owner_customer_type_hint">请选择客户类型</string>
+    <string name="order_create_owner_jop">职务</string>
+    <string name="order_create_owner_jop_hint">请选择职务</string>
+    <string name="order_create_owner_industry">行业</string>
+    <string name="order_create_owner_industry_hint">请选择行业</string>
+    <string name="order_create_owner_company_type">单位性质</string>
+    <string name="order_create_owner_company_type_hint">请选择单位性质</string>
+    <string name="order_create_order_intention_car_series">意向车系</string>
+    <string name="order_create_order_intention_car_series_hint">请选择意向车系</string>
+    <string name="order_create_order_intention_car_type">意向车型</string>
+    <string name="order_create_order_intention_car_type_hint">请选择意向车型</string>
+    <string name="order_create_order_intention_car_code">六位码</string>
+    <string name="order_create_order_intention_car_code_hint">请输入六位码</string>
+    <string name="order_create_order_outer_color">外观颜色</string>
+    <string name="order_create_order_outer_color_hint">请选择外观颜色</string>
+    <string name="order_create_order_inner_color">内饰颜色</string>
+    <string name="order_create_order_inner_color_hint">请选择内饰颜色</string>
+    <string name="order_create_order_optional_package">选装包</string>
+    <string name="order_create_order_optional_package_hint">请选择选装包</string>
+    <string name="order_create_order_forecast_delivery_date">预计提车日期</string>
+    <string name="order_create_order_forecast_delivery_date_hint">请选择预计提车日期</string>
+    <string name="order_create_order_subscription">订金金额</string>
+    <string name="order_create_order_subscription_hint">请输入订金金额</string>
+    <string name="order_create_order_deal_price">车辆实际成交价</string>
+    <string name="order_create_order_deal_price_hint">请输入车辆实际成交价</string>
+    <string name="order_create_order_is_member">是否会员</string>
+    <string name="order_create_order_is_by_friend">是否朋友推荐</string>
+    <string name="order_create_order_member_owner_name">车主姓名</string>
+    <string name="order_create_order_member_owner_name_hint">请输入车主姓名</string>
+    <string name="order_create_order_member_owner_member_id">车主会员卡号</string>
+    <string name="order_create_order_member_owner_member_id_hint">请输入车主会员卡号</string>
+    <string name="order_create_order_member_owner_vin">车主VIN</string>
+    <string name="order_create_order_member_owner_vin_hint">请输入车主VIN</string>
+    <string name="order_create_order_member_owner_mobile">车主电话</string>
+    <string name="order_create_order_member_owner_mobile_hint">请输入车主电话</string>
+    <string name="order_create_order_member_owner_verify">车主会员验证</string>
+    <string name="order_create_order_member_owner_verify_btn">验证</string>
+    <string name="order_create_order_friend_recommend_name">推荐人姓名</string>
+    <string name="order_create_order_friend_recommend_name_hint">请输入推荐人姓名</string>
+    <string name="order_create_order_friend_recommend_member_id">推荐人会员卡号</string>
+    <string name="order_create_order_friend_recommend_member_id_hint">请输入推荐人会员卡号</string>
+    <string name="order_create_order_friend_recommend_vin">推荐人VIN</string>
+    <string name="order_create_order_friend_recommend_vin_hint">请输入推荐人VIN</string>
+    <string name="order_create_order_friend_recommend_mobile">推荐人电话</string>
+    <string name="order_create_order_friend_recommend_mobile_hint">请输入推荐人电话</string>
+    <string name="order_create_order_friend_recommend_verify">推荐人会员验证</string>
+    <!--订单结束-->
+
+    <string-array name="mileageArray">
+        <item>0</item>
+        <item>5W</item>
+        <item>10W</item>
+        <item>15W</item>
+    </string-array>
+
+    <string-array name="moneyArray">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>50+</item>
+    </string-array>
+    <!--新潜客结束-->
+
+    <!--自定义对话框 start-->
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_confirm">Confirm</string>
+    <!--自定义对话框 end-->
+
+    <!--我的 start-->
+    <string name="mine_task_list">Task list</string>
+    <string name="mine_oppointment_list">Appointment list</string>
+    <string name="mine_approve_list">Approval list</string>
+    <string name="mine_notice_center">Notification</string>
+    <string name="mine_change_paw">Change password</string>
+    <string name="mine_about">About</string>
+    <string name="mine_logout">Log off</string>
+    <string name="mine_used_car">阳光易手车</string>
+    <string name="mine_logout_dialog_content">Are you sure to log off?</string>
+    <string name="mine_logout_success">Log off success</string>
+    <string name="mine_logout_fail">Log off failure</string>
+    <string name="mine_take_pic">Take photo</string>
+    <string name="mine_photo_album">Choose from album</string>
+    <string name="mine_photo_change_success">Portrait change sccess</string>
+    <string name="mine_photo_change_fail">Portrait change failed</string>
+    <string name="mine_get_data_fail">Get data failed</string>
+    <string name="mine_take_pic_sd_error">Interanal storage error, can not invoke camera</string>
+    <string name="mine_paw_title">Change password</string>
+    <string name="mine_paw_original">Original password</string>
+    <string name="mine_paw_new">Enter password</string>
+    <string name="mine_paw_new_tip">password must be longer than 8digtals and include both letters and numbers</string>
+    <string name="mine_paw_new_confirm_tip">password does not match with the former one. Please fill in again.</string>
+    <string name="mine_paw_new_confirm">Enter password again</string>
+    <string name="mine_paw_original_input">Please enter original password</string>
+    <string name="mine_paw_new_input">Please enter password</string>
+    <string name="mine_paw_new_confirm_input">Please enter password again</string>
+    <string name="mine_paw_submit">Submit</string>
+    <string name="mine_paw_difference">The two passwords do not match</string>
+    <string name="mine_paw_error">Password must be at least 8 characters with numbers and letter</string>
+    <string name="mine_paw_md5_error">Change password failed</string>
+    <string name="mine_notification_title">Notification center</string>
+    <string name="mine_notification_edit">Edit</string>
+    <string name="mine_notification_cancel">Cancel</string>
+    <string name="mine_notification_select_all">Select all</string>
+    <string name="mine_notification_read">Mark as read</string>
+    <string name="mine_notification_empty_tip">Please select pending notification</string>
+    <string name="mine_notification_no_not_read_tip">No messages in selected items</string>
+    <string name="mine_notification_delete">Delete</string>
+    <string name="mine_notification_set_read_success">Mark as read success</string>
+    <string name="mine_notification_set_read_fail">v</string>
+    <string name="mine_notification_delete_success">Delete success</string>
+    <string name="mine_notification_delete_fail">Delete failed</string>
+    <string name="mine_change_paw_success">Change password success</string>
+    <string name="mine_change_old_paw_error">Original password is wrong!</string>
+    <string name="mine_change_paw_fail">Change password failed</string>
+    <string name="mine_change_paw_timeout">Change password timeout</string>
+    <string name="mine_schedule_title">Appointment list</string>
+    <string name="mine_schedule_tab_wait">Pending</string>
+    <string name="mine_schedule_tab_complete">Finished</string>
+    <string name="mine_schedule_update">Change appointment</string>
+    <string name="mine_schedule_cancel">Delete appointment</string>
+    <string name="mine_schedule_cancel_tip">Are you sure to delete this appointment?</string>
+    <string name="mine_schedule_cancel_success">Cancel appointment success</string>
+    <string name="mine_schedule_cancel_fail">Cancel appointment failed</string>
+    <string name="mine_schedule_update_title">Change appointment</string>
+    <string name="mine_schedule_update_schedule_id_empty">Can not get effective appointment, please exit and retry</string>
+    <string name="mine_schedule_update_select_time">Please select appointment time</string>
+    <string name="mine_schedule_update_select_date">Please select appointment date</string>
+    <string name="mine_schedule_update_select_item">Please select appointment</string>
+    <string name="mine_schedule_update_success">Change appointment success</string>
+    <string name="mine_schedule_update_fail">Change appointment failed</string>
+    <string name="mine_schedule_update_timeout">Change appointment timeout</string>
+    <string name="mine_schedule_update_select_date_error">Schedule must be later than current time.</string>
+    <string name="mine_schedule_update_select_time_error">Schedule must be later than current time.</string>
+    <string name="mine_schedule_update_date">Date</string>
+    <string name="mine_schedule_update_time">Time</string>
+    <string name="mine_schedule_update_item">Appointment</string>
+    <string name="mine_schedule_car_type">Vehicle model:</string>
+    <string name="mine_approve_title">Approval list</string>
+    <string name="mine_approve_tab_wait">Pending approval</string>
+    <string name="mine_approve_tab_complete">Approved</string>
+    <string name="mine_approve_response">Principal</string>
+    <string name="mine_approve_reject_reason_empty">Please enter the rejection reason</string>
+    <string name="mine_about_title">About</string>
+    <string name="mine_about_version">Sales App</string>
+    <string name="mine_about_copy_right">SAIC Volkswagen</string>
+    <string name="mine_approve_support">Are you sure to approve?</string>
+    <string name="mine_approve_reject_title">Reject to approve</string>
+    <string name="mine_approve_support_title">Approval</string>
+    <string name="mine_approve_reject_reason">Reasons for rejection (required)</string>
+    <string name="mine_approve_support_reason">opinion from manager</string>
+    <string name="mine_approve_complete_reject_reason">refuse reason</string>
+    <string name="mine_approve_reject_success">Reject approval success</string>
+    <string name="mine_approve_reject_fail">Reject approval failed</string>
+    <string name="mine_approve_reject_reason_hint">Reject approval</string>
+    <string name="mine_approve_support_reason_hint">Please fill in opinion of managers</string>
+    <string name="mine_approve_support_success">Approval success</string>
+    <string name="mine_approve_support_fail">Approval failed</string>
+    <string name="mine_take_pic_error">Obtain photo error, please try later</string>
+    <string name="mine_change_env">Change Env</string>
+    <!--我的 end-->
+
+    <!--任务 start-->
+    <string name="task_title">Pending task</string>
+    <string name="task_tab_leads">customer source</string>
+    <string name="task_tab_traffic">Traffic</string>
+    <string name="task_tab_e_commerce">E-commerce</string>
+    <string name="task_tab_follow_up">Follow-up</string>
+    <string name="task_tab_follow_up_plan_empty">no followup plan</string>
+    <string name="task_tab_leads_desc_empty">no remark</string>
+    <string name="task_e_commerce_benefit_dialog_title">Equity</string>
+    <string name="task_e_commerce_get_benefit_fail">Access equity failed</string>
+    <string name="task_e_commerce_get_benefit_empty">No equity data</string>
+    <string name="task_e_commerce_benefit_dialog_close">Close</string>
+    <string name="task_e_commerce_delay">Overdue</string>
+    <string name="task_e_commerce_day">Day</string>
+    <string name="task_follow_up_filter_title">followup filter</string>
+    <string name="task_follow_up_filter_follow_time">followup time</string>
+    <!--任务 end-->
+
+    <!--报告 start-->
+    <string name="kpi_today_add">Today new order</string>
+    <string name="kpi_today_plan">Today plan</string>
+    <string name="kpi_today">Today</string>
+    <string name="kpi_today_group">Today all</string>
+    <string name="kpi_follow_up_number">Number of follow-ups</string>
+    <string name="kpi_arrive_shop">Invitation</string>
+    <string name="kpi_schedule_drive">Reserve test drive</string>
+    <string name="kpi_schedule_order">Reservation order</string>
+    <string name="kpi_schedule_delivery">Appointment to deliver vehicle</string>
+    <string name="kpi_add_all_traffic">New total traffic</string>
+    <string name="kpi_add_valid_traffic">New effective traffic</string>
+    <string name="kpi_add_traffic">New opportunity</string>
+    <string name="kpi_add_order">New order</string>
+    <string name="kpi_add_fail">New defeat</string>
+    <string name="kpi_add_sleep">New dormant</string>
+    <string name="kpi_add_delivery">New delivery</string>
+    <string name="kpi_customer">Customers</string>
+    <string name="kpi_check_type_sale">View by Sales</string>
+    <string name="kpi_check_type_car">View by vehicle model</string>
+    <string name="kpi_check_type_valid">Show valid only</string>
+    <string name="kpi_check_type_all">Show all</string>
+    <string name="report_month_title">report for this month</string>
+    <!--报告 end-->
+
+    <string name="nls_start_record">Start recording, then click to stop</string>
+    <string name="nls_stop_record">Stop recording</string>
+
+    <!--登录 start-->
+    <string name="login_forget_password_dialog">Please contact the administrator</string>
+    <string name="login_forget_password">Forget</string>
+    <string name="login_enter_again">ReEnter</string>
+    <string name="login_success">Login Success</string>
+    <string name="login_user_name">UserName</string>
+    <string name="login_user_password">Password</string>
+    <string name="login_btn">Login</string>
+    <string name="login_user_not_exist">The user name does not exist</string>
+    <string name="login_user_passwod_error">The user name and password do not match</string>
+    <string name="login_token_expired">登录信息已过期，请重新登录</string>
+    <!--报告 end-->
+
+    <!-- 升级 start -->
+    <string name="update_find_new_version">Found a new version. Please update!</string>
+    <string name="update_has_download_new_version">Already download. Please install.</string>
+    <string name="update_find_is_new">Now is the newest version.</string>
+    <string name="update_check_fail">failed to get new version.</string>
+    <string name="update_sd_error">Phone internal storage is abnormal, can not download the new version.</string>
+    <string name="update_download_error">Download failed, please try again later!</string>
+    <string name="update_dialog_confirm_btn_text">update</string>
+    <string name="update_dialog_download_per_hint">0.0%</string>
+    <string name="update_dialog_file_size_hint">0.0MB&#160;/&#160;0.0MB</string>
+    <!-- 升级 end -->
+
+    <!-- 取消订单 start -->
+    <string name="cancel_order_title">cancel order</string>
+    <string name="cancel_order_follow_tab">this followup record</string>
+    <string name="cancel_order_next_follow_tab">next followup record</string>
+    <string name="cancel_order_contact_way">contact</string>
+    <string name="cancel_order_contact_way_hint">Please select contact way.</string>
+    <string name="cancel_order_follow_up_result">result of followup</string>
+    <string name="cancel_order_follow_up_way">followup way</string>
+    <string name="cancel_order_follow_up_way_hint">please select followup way</string>
+    <string name="cancel_order_follow_up_time">followup time</string>
+    <string name="cancel_order_sleep_end_time">end of sleep time</string>
+    <string name="cancel_order_sleep_reason">sleep reason</string>
+    <string name="cancel_order_select_sleep_reason">Please select sleep reason</string>
+    <string name="cancel_order_follow_up_time_hint">Please select followup time</string>
+    <string name="cancel_order_follow_up_plan">followup time</string>
+    <string name="cancel_order_failed_reason">failed time</string>
+    <string name="cancel_order_failed_reason_hint">select failed reason</string>
+    <string name="cancel_order_failed_reason_follow">continue follow up</string>
+    <string name="cancel_order_failed_reason_failed">failure</string>
+    <string name="cancel_order_failed_reason_same">same product</string>
+    <string name="cancel_order_failed_reason_diff">competitive product</string>
+    <string name="cancel_order_success">cancel order successfully</string>
+    <string name="cancel_otd_order_request_success">submit successfully.OTD order is being cancelled...</string>
+    <string name="cancel_order_failed">failed to cancel order</string>
+    <!-- 取消订单 end -->
+
+    <!--评估师开始-->
+    <string name="appraiser_list_title">选择评估师</string>
+    <string name="appraiser_select_appraiser_tip">选择评估师</string>
+    <!--评估师结束-->
+
+    <!--选装包开始-->
+    <string name="optional_package_select_title">select optioanl package</string>
+    <string name="optional_package_select_empty">Please select optioanl package</string>
+    <!--选装包结束-->
+
+    <!--Rd首页开始-->
+    <string name="rd_home_header_traffic">客源</string>
+    <string name="rd_home_header_ec">电商</string>
+    <string name="rd_home_header_followup">跟进</string>
+    <string name="rd_home_header_to_be_approved">待审批</string>
+    <string name="rd_mine_schedule_cancel_tip">是否要取消预约？</string>
+    <!--Rd首页结束-->
+
+</resources>

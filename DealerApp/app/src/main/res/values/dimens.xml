@@ -1,0 +1,131 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--for demo start-->
+    <dimen name="space_1">1dp</dimen>
+    <dimen name="space_2">2dp</dimen>
+    <dimen name="space_3">2dp</dimen>
+    <dimen name="space_4">4dp</dimen>
+    <dimen name="space_5">5dp</dimen>
+    <dimen name="space_6">6dp</dimen>
+    <dimen name="space_7">7dp</dimen>
+    <dimen name="space_8">8dp</dimen>
+    <dimen name="space_10">10dp</dimen>
+    <dimen name="space_12">12dp</dimen>
+    <dimen name="space_14">14dp</dimen>
+    <dimen name="space_15">15dp</dimen>
+    <dimen name="space_16">16dp</dimen>
+    <dimen name="space_18">18dp</dimen>
+    <dimen name="space_20">20dp</dimen>
+    <dimen name="space_24">24dp</dimen>
+    <dimen name="space_25">25dp</dimen>
+    <dimen name="space_35">35dp</dimen>
+    <dimen name="space_45">45dp</dimen>
+    <dimen name="space_50">50dp</dimen>
+    <dimen name="space_55">55dp</dimen>
+    <dimen name="space_60">60dp</dimen>
+
+    <dimen name="line_0_1">0.1dp</dimen>
+    <dimen name="line_0_5">0.5dp</dimen>
+    <dimen name="line_0_8">0.8dp</dimen>
+    <dimen name="line_1">1dp</dimen>
+    <dimen name="line_2">2dp</dimen>
+    <dimen name="line_2_4">2.4dp</dimen>
+
+    <dimen name="textSize_8">8sp</dimen>
+    <dimen name="textSize_10">10sp</dimen>
+    <dimen name="textSize_11">11sp</dimen>
+    <dimen name="textSize_12">12sp</dimen>
+    <dimen name="textSize_13">13sp</dimen>
+    <dimen name="textSize_14">14sp</dimen>
+    <dimen name="textSize_16">16sp</dimen>
+    <dimen name="textSize_18">18sp</dimen>
+    <dimen name="textSize_20">20sp</dimen>
+
+    <dimen name="img_24">24dp</dimen>
+    <dimen name="img_48">48dp</dimen>
+    
+    <dimen name="btn_height_36">36dp</dimen>
+    <dimen name="btn_height_48">48dp</dimen>
+    <!--for demo end-->
+
+    <!-- 通用 start-->
+    <dimen name="activity_title_bar_height">48dp</dimen>
+    <dimen name="activity_second_nav_bar_height">40dp</dimen>
+    <dimen name="bottom_btn_height">46dp</dimen>
+    <!-- 通用 end-->
+
+    <!--待处理线索页 start-->
+    <dimen name="leads_item_height">90dp</dimen>
+    <dimen name="leads_item_divider_height">6dp</dimen>
+    <dimen name="leads_item_back_view_layout_width">198dp</dimen>
+    <dimen name="leads_item_back_view_item_width">60dp</dimen>
+    <!--待处理线索页 end-->
+
+    <!--资源－流量页 start-->
+    <dimen name="traffic_item_height">112dp</dimen>
+    <dimen name="traffic_item_back_view_divider_width">1dp</dimen>
+    <dimen name="traffic_item_back_view_three_item_width">60dp</dimen>
+    <dimen name="traffic_item_back_view_one_item_width">80dp</dimen>
+    <dimen name="traffic_item_three_item_back_layout_width">182dp</dimen>
+    <dimen name="traffic_item_one_item_back_layout_width">80dp</dimen>
+    <!--资源－流量页 end-->
+
+    <!--自定义对话框 start-->
+    <dimen name="custom_dialog_title_height">66dp</dimen>
+    <dimen name="custom_dialog_bottom_btn_height">48dp</dimen>
+    <!--自定义对话框 end-->
+
+    <!--新潜客start-->
+    <dimen name="new_customer_grid_recycler_spacing">10dp</dimen>
+    <!--新潜客和详情页最下方空出44dp-->
+    <dimen name="new_customer_bottom_margin">44dp</dimen>
+    <dimen name="new_customer_row_height">48dp</dimen>
+    <dimen name="custom_item_layout_height">48dp</dimen>
+    <dimen name="custom_item_star_left_margin">15dp</dimen>
+    <dimen name="custom_item_star_right_margin">6dp</dimen>
+    <dimen name="custom_item_layout_right_padding">15dp</dimen>
+    <dimen name="custom_item_layout_top_bottom_padding">17dp</dimen>
+    <dimen name="rd_custom_item_layout_left_margin">15dp</dimen>
+    <dimen name="rd_custom_item_layout_right_margin">15dp</dimen>
+    <!--新潜客end-->
+
+    <!--我的 start-->
+    <dimen name="mine_notification_radio_width">32dp</dimen>
+    <dimen name="mine_notification_edit_bar_height">64dp</dimen>
+    <!--我的 end-->
+
+    <!-- CardView适配 -->
+    <dimen name="home_card_view_item_top_divider">5dp</dimen>
+
+    <!--<dimen name="home_card_view_item_height">118dp</dimen>-->
+    <!--<dimen name="home_card_view_item_margin_bottom">0dp</dimen>-->
+    <!--<dimen name="home_card_view_item_margin_left">10dp</dimen>-->
+    <!--<dimen name="home_card_view_item_margin_right">10dp</dimen>-->
+    <!--<dimen name="home_card_view_item_margin_top">0dp</dimen>-->
+    <!--<dimen name="home_item_internal_card_view_margin_right">10dp</dimen>-->
+    <!--<dimen name="home_item_internal_card_view_margin_top">6dp</dimen>-->
+    <!--<dimen name="home_auto_play_item_height">112dp</dimen>-->
+
+    <dimen name="home_card_view_item_height">104dp</dimen>
+    <dimen name="home_card_view_item_margin_bottom">5dp</dimen>
+    <dimen name="home_card_view_item_margin_left">14dp</dimen>
+    <dimen name="home_card_view_item_margin_right">14dp</dimen>
+    <dimen name="home_card_view_item_margin_top">5dp</dimen>
+    <dimen name="home_item_internal_card_view_margin_right">2dp</dimen>
+    <dimen name="home_item_internal_card_view_margin_top">10dp</dimen>
+    <dimen name="home_auto_play_item_height">98dp</dimen>
+
+    <!-- listView相关 -->
+    <dimen name="list_view_margin_left_right">14dp</dimen>
+    <dimen name="list_view_padding_left_right">10dp</dimen>
+    <dimen name="list_view_divider_height">10dp</dimen>
+    <dimen name="list_view_round_corner">8dp</dimen>
+    <dimen name="list_vip_bar_round_corner">12dp</dimen>
+
+    <dimen name="title_divider_height">1dp</dimen>
+
+</resources>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/item_customer_detail_followup_date_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_customer_detail_followup_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textColor="#8994A0"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_customer_detail_followup_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="0000-00-00"
+            android:textColor="#8994A0"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_customer_detail_followup_icon_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_customer_detail_followup_right_ll"
+        android:layout_alignTop="@+id/item_customer_detail_followup_right_ll"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/item_customer_detail_followup_date_ll">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="#EBEBEB" />
+
+        <LinearLayout
+            android:id="@+id/item_customer_detail_followup_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/item_customer_detail_followup_level_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/customer_detail_followup_h" />
+
+            <ImageView
+                android:id="@+id/item_customer_detail_followup_type_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:src="@mipmap/item_customer_detail_followup_hall" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item_customer_detail_followup_right_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/item_customer_detail_followup_icon_ll"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:id="@+id/item_customer_detail_followup_content_bg"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/customer_detail_followup_editable_bg">
+
+            <RelativeLayout
+                android:id="@+id/item_customer_detail_followup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp">
+
+                <TextView
+                    android:id="@+id/item_customer_detail_followup_line1_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginTop="9dp"
+                    android:text="待跟进"
+                    android:textColor="@color/new_yellow_card_dark_blue"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/item_customer_detail_followup_approval_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="9dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="9dp"
+                    android:textColor="@color/new_yellow_card_dark_blue"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/item_customer_detail_followup_edit_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="9dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="9dp"
+                    android:src="@mipmap/item_customer_detail_followup_edit" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/item_customer_detail_followup_dash_line"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_below="@id/item_customer_detail_followup"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/customer_detail_followup_dash_line"
+                android:layerType="software" />
+
+            <TextView
+                android:id="@+id/item_customer_detail_followup_line2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_customer_detail_followup"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:textColor="@color/new_yellow_card_dark_blue"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

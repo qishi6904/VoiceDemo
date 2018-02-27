@@ -1,0 +1,153 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--for demo start-->
+    <style name="Theme.ToolBar.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">@dimen/textSize_16</item>
+        <item name="android:textColorPrimary">@color/text_common</item>
+    </style>
+
+    <style name="Custom.Theme.ToolBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:actionOverflowButtonStyle">@style/ActionButton.Overflow</item>
+    </style>
+
+    <style name="ActionButton.Overflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@mipmap/ic_actionbar_menu_more_white</item>
+        <item name="android:color">@android:color/white</item>
+    </style>
+
+    <style name="toolbar_textAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">@dimen/textSize_18</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--for demo end-->
+
+    <!-- loading dialog -->
+    <style name="loading_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0</item>
+    </style>
+
+    <!-- custom dialog -->
+    <style name="custom_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="recording_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊-->
+    </style>
+
+    <style name="NewCardRightTextStyle">
+        <item name="android:layout_gravity">right|center_vertical</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/new_yellow_card_text_content</item>
+        <item name="android:textColorHint">@color/new_yellow_card_input_text</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="RdNewCardRightTextStyle">
+        <item name="android:layout_gravity">right|center_vertical</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/rd_custom_item_view_title_text</item>
+        <item name="android:textColorHint">@color/rd_custom_item_view_hint_text</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="NewCardRightTextStyle.TextView" parent="NewCardRightTextStyle">
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:drawableRight">@mipmap/new_yellow_card_right_arrow</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="NewCardRightTextStyle.EditText" parent="NewCardRightTextStyle">
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="RdNewCardRightTextStyle.EditText" parent="RdNewCardRightTextStyle">
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="NewCustomerDividingLineFull">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/new_yellow_card_divide_line</item>
+    </style>
+
+    <style name="RdNewCustomerDividingLineFull">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/rd_custom_item_view_dividing_line</item>
+    </style>
+
+    <style name="NewCustomerDividingLineHalf" parent="NewCustomerDividingLineFull">
+        <item name="android:layout_marginLeft">25dp</item>
+    </style>
+
+    <style name="RdNewCustomerDividingLineHalf" parent="RdNewCustomerDividingLineFull">
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+    <style name="NewCustomerGapView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10.4dp</item>
+    </style>
+
+    <style name="AppTheme.Dialog.NoTitleBar" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    //1、设置背景图Theme
+    <style name="Theme.AppStartLoad" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@mipmap/start_page</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    //2、设置透明Theme
+    <style name="Theme.AppStartLoadTranslucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    //for slide to close
+    <style name="AppTheme.Slide" parent="@style/AppTheme">
+        <!--Required-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/AppTheme.Slide.Animation</item>
+    </style>
+
+    <style name="AppTheme.Slide.Animation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_slide_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_slide_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_slide_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_slide_out</item>
+    </style>
+</resources>

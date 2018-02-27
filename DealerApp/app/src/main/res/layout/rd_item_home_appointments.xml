@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rd_item_home_appointments_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/rd_item_home_appointments_left_blank_view"
+            android:layout_width="15dp"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true" />
+
+        <LinearLayout
+            android:id="@+id/rd_item_home_appointments_container_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rd_item_home_appointments_right_blank_view"
+            android:layout_toRightOf="@+id/rd_item_home_appointments_left_blank_view"
+            android:background="@drawable/rd_home_item_uncompleted_appointment_bg"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/rd_item_home_appointments_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="试乘试驾"
+                    android:textColor="@color/rd_home_item_appointments_black"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/rd_item_home_appointments_change_time_bt"
+                    android:layout_width="63dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/rd_home_header_cancel_appointment_bg"
+                    android:focusable="false"
+                    android:text="更改时间"
+                    android:textColor="@color/rd_home_item_appointments_button_border"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/rd_item_home_appointments_cancel_appointment_bt"
+                    android:layout_width="63dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@id/rd_item_home_appointments_change_time_bt"
+                    android:background="@drawable/rd_home_header_cancel_appointment_bg"
+                    android:focusable="false"
+                    android:text="取消预约"
+                    android:textColor="@color/rd_home_item_appointments_button_border"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <LinearLayout
+                    android:id="@+id/rd_item_home_appointments_crown_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/rd_item_home_appointments_crown_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:src="@mipmap/rd_home_crown"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/rd_item_home_appointments_time_tv"
+                        android:layout_width="46dp"
+                        android:layout_height="21dp"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="10:30"
+                        android:textColor="@color/rd_home_item_appointments_black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/rd_item_home_appointments_dividing_vertical_view"
+                    android:layout_width="3dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@id/rd_item_home_appointments_crown_ll"
+                    android:background="@color/rd_home_item_appointments_normal_border" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_toRightOf="@id/rd_item_home_appointments_dividing_vertical_view"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rd_item_home_appointments_name_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:gravity="center"
+                            android:text="王先生"
+                            android:textColor="@color/rd_home_item_appointments_black" />
+
+                        <ImageView
+                            android:id="@+id/rd_item_home_appointments_opp_level_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="17dp"
+                            android:gravity="center"
+                            android:text="电话："
+                            android:textColor="@color/rd_home_item_appointments_black" />
+
+                        <TextView
+                            android:id="@+id/rd_item_home_appointments_phone_number_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="17dp"
+                            android:gravity="center"
+                            android:text="13712345678"
+                            android:textColor="@color/rd_home_item_appointments_black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="17dp"
+                            android:gravity="center"
+                            android:text="车系："
+                            android:textColor="@color/rd_home_item_appointments_black" />
+
+                        <TextView
+                            android:id="@+id/rd_item_home_appointments_car_series_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="17dp"
+                            android:gravity="center"
+                            android:text="途观L"
+                            android:textColor="@color/rd_home_item_appointments_black" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/rd_item_home_appointments_call_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/rd_home_phone" />
+
+                <ImageView
+                    android:id="@+id/rd_item_home_appointments_sms_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@id/rd_item_home_appointments_call_iv"
+                    android:src="@mipmap/rd_home_sms" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/rd_item_home_appointments_right_blank_view"
+            android:layout_width="15dp"
+            android:layout_height="1dp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+</LinearLayout>

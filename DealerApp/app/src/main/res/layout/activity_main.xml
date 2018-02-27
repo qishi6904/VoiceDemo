@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_bar_height"
+        android:background="@color/title_bg">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/main_index_page"
+            android:textColor="@color/resource_assist_text"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/iv_filter"
+            android:layout_width="@dimen/activity_title_bar_height"
+            android:layout_height="@dimen/activity_title_bar_height"
+            android:padding="12dp"
+            android:src="@mipmap/ic_home_add"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/activity_title_bar_height"
+            android:layout_height="@dimen/activity_title_bar_height"
+            android:padding="12dp"
+            android:src="@mipmap/ic_search"
+            android:layout_toLeftOf="@+id/iv_filter"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.svw.dealerapp.ui.widget.NoScrollViewPager
+            android:id="@+id/nvp_main_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <View
+            android:id="@+id/v_shadow_up"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_divider_height"
+            android:layout_alignParentTop="true"
+            android:background="@color/title_divider" />
+
+    </RelativeLayout>
+
+    <com.svw.dealerapp.ui.widget.NavBar
+        android:id="@+id/nb_main_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_bar_height"
+        android:background="@color/bottom_nav_bg"/>
+
+</LinearLayout>

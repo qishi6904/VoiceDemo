@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/new_yellow_card_info_table_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:stretchColumns="2">
+
+    <TableRow
+        android:id="@+id/new_customer_step_4_followup_date_tr"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_column="0"
+            android:layout_marginLeft="@dimen/custom_item_star_left_margin"
+            android:layout_marginRight="@dimen/custom_item_star_right_margin"
+            android:text="@string/new_customer_mandatory"
+            android:textColor="#EA4F44" />
+
+        <TextView
+            android:layout_column="1"
+            android:text="@string/new_customer_next_followup_date" />
+
+        <TextView
+            android:id="@+id/new_customer_step_4_followup_date_tv"
+            style="@style/NewCardRightTextStyle.TextView"
+            android:layout_width="wrap_content"
+            android:layout_column="2"
+            android:hint="@string/new_customer_next_followup_date_hint" />
+
+        <View
+            android:layout_width="@dimen/custom_item_layout_right_padding"
+            android:layout_height="48dp" />
+    </TableRow>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:background="@color/new_yellow_card_divide_line" />
+
+    <TableRow
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_column="0"
+            android:layout_marginLeft="@dimen/custom_item_star_left_margin"
+            android:layout_marginRight="@dimen/custom_item_star_right_margin"
+            android:text="@string/new_customer_mandatory"
+            android:textColor="#EA4F44"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_column="1"
+            android:text="@string/new_customer_next_followup_contact_plan" />
+
+        <!--<EditText-->
+        <!--android:id="@+id/new_customer_step_4_followup_plan_et"-->
+        <!--style="@style/NewCardRightTextStyle.EditText"-->
+        <!--android:layout_height="@dimen/new_customer_row_height"-->
+        <!--android:layout_column="2"-->
+        <!--android:hint="@string/new_customer_next_followup_contact_plan_hint" />-->
+
+        <!--<View android:layout_height="@dimen/new_customer_row_height" />-->
+    </TableRow>
+
+    <com.svw.dealerapp.ui.widget.EditTextWithMicLayout
+        android:id="@+id/et_with_mic1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp">
+
+    </com.svw.dealerapp.ui.widget.EditTextWithMicLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="25dp"
+        android:background="@color/new_yellow_card_divide_line" />
+
+    <TableRow
+        android:id="@+id/new_customer_step_4_followup_type_tr"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_column="0"
+            android:layout_marginLeft="@dimen/custom_item_star_left_margin"
+            android:layout_marginRight="@dimen/custom_item_star_right_margin"
+            android:text="@string/new_customer_mandatory"
+            android:textColor="#EA4F44"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_column="1"
+            android:text="@string/new_customer_next_followup_contact_method" />
+
+        <TextView
+            android:id="@+id/new_customer_step_4_followup_type_tv"
+            style="@style/NewCardRightTextStyle.TextView"
+            android:layout_width="wrap_content"
+            android:layout_column="2"
+            android:hint="@string/new_customer_next_followup_contact_method_plan" />
+
+        <View android:layout_height="@dimen/new_customer_row_height" />
+    </TableRow>
+
+    <View
+        android:id="@+id/new_customer_step_3_failure_reason_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/new_yellow_card_divide_line"
+        android:visibility="gone" />
+
+</TableLayout>

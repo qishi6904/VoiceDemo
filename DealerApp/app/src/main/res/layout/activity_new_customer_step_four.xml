@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--用来抢占焦点，以免进入时键盘自动弹出-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <LinearLayout
+        android:id="@+id/activity_new_yellow_card_titlebar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_title_bar" />
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp">
+
+            <View
+                android:background="@color/new_yellow_card_blue"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="100%" />
+
+        </android.support.percent.PercentRelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_new_yellow_card_bottom_layout"
+        android:layout_below="@id/activity_new_yellow_card_titlebar_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/new_customer_bottom_margin">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10.4dp" />
+
+            <!--<FrameLayout-->
+            <!--android:id="@+id/new_customer_step_4_followup_container"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--</FrameLayout>-->
+            <!--<include layout="@layout/layout_new_customer_step_4_follow_up_plan" />-->
+
+            <com.svw.dealerapp.ui.widget.CustomSectionViewGroup
+                android:id="@+id/new_customer_step_4_followup_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10.4dp" />
+
+            <com.svw.dealerapp.ui.widget.CustomSectionViewGroup
+                android:id="@+id/new_customer_step_4_appointment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--<FrameLayout-->
+            <!--android:id="@+id/new_customer_step_4_appointment_container"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/new_customer_bottom_margin">-->
+
+            <!--</FrameLayout>-->
+
+            <!--<include layout="@layout/layout_new_customer_step_4_appointment" />-->
+
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="10.4dp" />-->
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/activity_new_yellow_card_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/new_customer_step_4_submit_bt"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/new_customer_next_button_selector"
+            android:enabled="false"
+            android:text="@string/new_customer_create_complete"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

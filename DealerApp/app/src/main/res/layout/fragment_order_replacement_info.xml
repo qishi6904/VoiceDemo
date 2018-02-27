@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+        android:id="@+id/order_replacement_name_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+        android:id="@+id/order_replacement_mobile_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+        android:id="@+id/order_replacement_vin_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+        android:id="@+id/order_replacement_member_number_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForButton
+        android:id="@+id/order_replacement_member_check_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

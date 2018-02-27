@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/new_yellow_card_info_table_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="20dp">
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForRecycleView
+        android:id="@+id/new_customer_step_3_contact_method_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForRecycleView
+        android:id="@+id/new_customer_step_3_contact_result_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForOptionsPicker
+        android:id="@+id/new_customer_step_3_failure_reason_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForOptionsPicker
+        android:id="@+id/new_customer_step_3_competitors_series_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForEditTextWithMic
+        android:id="@+id/new_customer_step_3_competitors_series_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForOptionsPicker
+        android:id="@+id/new_customer_step_3_asleep_reason_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForDatePicker
+        android:id="@+id/new_customer_step_3_asleep_time_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.svw.dealerapp.ui.widget.EditTextWithMicLayout
+        android:id="@+id/et_with_mic1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <com.svw.dealerapp.ui.widget.RdCustomItemViewForCheckbox
+        android:id="@+id/new_customer_step_3_trial_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.EditTextWithMicLayout
+        android:id="@+id/et_with_mic2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone" />
+</LinearLayout>

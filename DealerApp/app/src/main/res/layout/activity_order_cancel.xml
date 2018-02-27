@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_bar_height"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/activity_title_bar_height"
+            android:layout_height="@dimen/activity_title_bar_height"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/cancel_order_title"
+            android:textColor="@color/resource_assist_text"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="18dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/shape_item_indicator" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/cancel_order_follow_tab"
+                    android:textColor="@color/mine_blue"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/yellow_item_divider_bg" />
+
+            <com.svw.dealerapp.ui.widget.CustomItemViewForOptionsPicker
+                android:id="@+id/picker_contact_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:background="@color/white"
+                android:paddingLeft="20dp"
+                android:paddingTop="6dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text="*"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cancel_order_follow_up_result"
+                    android:textColor="@color/resource_main_text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_yellow_card_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:paddingLeft="20dp"
+                android:background="@color/white"
+                android:paddingBottom="10dp"/>
+
+            <View
+                android:id="@+id/v_failed_reason"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/yellow_item_divider_bg" />
+
+            <com.svw.dealerapp.ui.widget.CustomItemViewForOptionsPicker
+                android:id="@+id/picker_failed_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_next_follow_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/yellow_item_divider_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="1dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="18dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/shape_item_indicator" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="@string/cancel_order_next_follow_tab"
+                        android:textColor="@color/mine_blue"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/yellow_item_divider_bg" />
+
+                <com.svw.dealerapp.ui.widget.CustomItemViewForDatePicker
+                    android:id="@+id/picker_next_follow_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.svw.dealerapp.ui.widget.CustomItemViewForOptionsPicker
+                    android:id="@+id/picker_follow_way"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@color/white"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="6dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="5dp"
+                        android:paddingTop="3dp"
+                        android:text="*"
+                        android:textColor="#FF0000"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel_order_follow_up_plan"
+                        android:textColor="@color/resource_main_text"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <com.svw.dealerapp.ui.widget.EditTextWithMicLayout
+                    android:id="@+id/et_with_mic"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@color/white"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="12dp">
+
+                </com.svw.dealerapp.ui.widget.EditTextWithMicLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.svw.dealerapp.ui.widget.CustomItemViewForOptionsPicker
+                    android:id="@+id/picker_sleep_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.svw.dealerapp.ui.widget.CustomItemViewForDatePicker
+                    android:id="@+id/picker_sleep_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/gray_999"
+        android:text="@string/mine_paw_submit"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_bar_height"
+        android:background="@color/title_bg">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/resource_assist_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/resource_select_filter_cancel"
+            android:textColor="@color/resource_assist_text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/resource_select_filter_reset"
+            android:textColor="@color/resource_main_text"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_show_self_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/resource_deal_cus_filter_only_self"
+                            android:textColor="@color/resource_blue"
+                            android:textSize="18sp"
+                            android:layout_centerVertical="true"/>
+                        <RelativeLayout
+                            android:layout_width="52dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentRight="true">
+
+                            <View
+                                android:id="@+id/v_show_self_switch_bg"
+                                android:layout_width="match_parent"
+                                android:layout_height="32dp"
+                                android:background="@drawable/shape_yellow_filter_switch_close_bg"
+                                android:layout_centerVertical="true"/>
+
+                            <ImageView
+                                android:id="@+id/iv_show_self_switch_left_icon"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@mipmap/ic_switch"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginLeft="-1.6dp" />
+
+                            <ImageView
+                                android:id="@+id/iv_show_self_switch_right_icon"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@mipmap/ic_switch"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginRight="-3dp"
+                                android:layout_alignParentRight="true"
+                                android:visibility="gone"/>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/v_only_self_under_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.6dp"
+                        android:background="@color/yellow_item_divider_bg"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/resource_yellow_filter_source"
+                        android:textColor="@color/resource_blue"
+                        android:textSize="18sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_yellow_card_source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/resource_yellow_filter_create_time"
+                        android:textColor="@color/resource_blue"
+                        android:textSize="18sp" />
+
+                    <com.svw.dealerapp.ui.widget.DatePeriodPickerView
+                        android:id="@+id/dppv_create_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/resource_deal_order_filter_delivery_time"
+                        android:textColor="@color/resource_blue"
+                        android:textSize="18sp" />
+
+                    <com.svw.dealerapp.ui.widget.DatePeriodPickerView
+                        android:id="@+id/dppv_delivery_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.6dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@color/yellow_item_divider_bg" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_filter_series"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/resource_yellow_filter_series"
+                            android:textColor="@color/resource_blue"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_series"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/resource_main_text"
+                            android:textSize="12sp"
+                            android:gravity="right"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:text="@string/resource_sales_filter_all"/>
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="14dp"
+                            android:src="@mipmap/new_yellow_card_right_arrow"
+                            android:layout_marginRight="6dp"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:paddingRight="8dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.6dp"
+                            android:background="@color/yellow_item_divider_bg"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/resource_yellow_filter_car_type"
+                            android:textColor="@color/resource_blue"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/et_car_type_code"
+                            android:layout_width="120dp"
+                            android:layout_height="18dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:maxLength="6"
+                            android:textColor="@color/resource_main_text"
+                            android:textSize="16sp"
+                            android:focusableInTouchMode="true"
+                            android:focusable="true"
+                            android:hint="@string/resource_yellow_car_type_input_tip"/>
+
+                        <TextView
+                            android:id="@+id/tv_car_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/et_car_type_code"
+                            android:textColor="@color/resource_assist_text"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/v_sales_filter_divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.6dp"
+                        android:background="@color/yellow_item_divider_bg"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_filter_sales"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/resource_yellow_filter_sales"
+                            android:textColor="@color/resource_blue"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_sales"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/resource_main_text"
+                            android:textSize="12sp"
+                            android:gravity="right"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:text="@string/resource_sales_filter_all"/>
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="14dp"
+                            android:src="@mipmap/new_yellow_card_right_arrow"
+                            android:layout_marginRight="6dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="8dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:background="@drawable/shape_nav_shadow_up" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_divider_height"
+            android:layout_alignParentTop="true"
+            android:background="@color/title_divider" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_btn_height"
+        android:gravity="center"
+        android:text="@string/resource_select_filter_confirm"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:background="@color/mine_blue"/>
+
+</LinearLayout>

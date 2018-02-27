@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForCarType
+        android:id="@+id/order_car_type_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForOptionsPicker
+        android:id="@+id/order_outer_decor_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForOptionsPicker
+        android:id="@+id/order_inner_decor_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+        android:id="@+id/order_package_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForOptionalPackage
+        android:id="@+id/order_optional_package"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForCheckbox
+        android:id="@+id/order_replacement_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForCheckbox
+        android:id="@+id/order_recommended_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+        android:id="@+id/order_down_payment_amount_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+        android:id="@+id/order_deal_amount_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.svw.dealerapp.ui.widget.CustomItemViewForDatePicker
+        android:id="@+id/order_delivery_date_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

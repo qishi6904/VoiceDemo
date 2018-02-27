@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    android:layout_height="60dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/customer_detail_item_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_front_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_customer_detail_appointment_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/appointment_car" />
+
+        <TextView
+            android:id="@+id/item_customer_detail_appointment_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/item_customer_detail_appointment_icon_iv"
+            android:text="交车"
+            android:textColor="@color/new_yellow_card_input_text"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_customer_detail_appointment_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/item_customer_detail_appointment_time_tv"
+            android:text="0月0日"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/item_customer_detail_appointment_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="46dp"
+            android:text="00:00"
+            android:textSize="30sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/new_yellow_card_blue" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_customer_back_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/customer_detail_item_bg"
+        android:paddingTop="2dp"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9" />
+
+        <LinearLayout
+            android:id="@+id/ll_schedule_update"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_schedule_update" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/mine_schedule_update"
+                android:textColor="@color/resource_assist_text"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/ll_schedule_cancel"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_schedule_cancel" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/mine_schedule_cancel"
+                android:textColor="@color/resource_assist_text"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/item_customer_detail_appointment_more_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:elevation="20dp"
+        android:padding="15dp"
+        android:src="@mipmap/appointment_more" />
+
+</RelativeLayout>

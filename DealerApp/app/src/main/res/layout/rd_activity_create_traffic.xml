@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_title_bar_height"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/activity_title_bar_height"
+            android:layout_height="@dimen/activity_title_bar_height"
+            android:padding="15dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/home_create_traffic_title"
+            android:textColor="@color/resource_assist_text"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/page_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="18dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/shape_item_indicator" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/home_create_traffic_info"
+                    android:textColor="@color/mine_blue"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/sv_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="46dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.6dp"
+                        android:background="@color/yellow_item_divider_bg" />
+
+                    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+                        android:id="@+id/et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.svw.dealerapp.ui.widget.CustomItemViewForRadioButton
+                        android:id="@+id/ret_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+                            android:id="@+id/et_phone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RelativeLayout
+                            android:id="@+id/rl_check_repeat"
+                            android:layout_width="58dp"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:background="@drawable/shape_create_tranffic_check_repeat_bg"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:text="@string/home_create_traffic_check_repeat"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:layout_centerVertical="true"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/new_yellow_card_divide_line"
+                                android:layout_alignParentBottom="true"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/car_series_model_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <com.svw.dealerapp.ui.widget.CustomItemViewForOptionsPicker
+                        android:id="@+id/srcType_picker_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.svw.dealerapp.ui.widget.CustomItemViewForOptionsPicker
+                        android:id="@+id/media_picker_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+                    <com.svw.dealerapp.ui.widget.CustomItemViewForOptionsPicker
+                        android:id="@+id/extend_picker_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <com.svw.dealerapp.ui.widget.CustomItemViewForCheckbox
+                        android:id="@+id/cb_recommended_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+                        android:id="@+id/et_recommended_name_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <com.svw.dealerapp.ui.widget.CustomItemViewForEditText
+                        android:id="@+id/et_recommended_mobile_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <com.svw.dealerapp.ui.widget.CustomItemViewForEditTextWithMic
+                        android:id="@+id/et_with_mic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="@color/title_bg" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/gray_999"
+            android:text="@string/mine_paw_submit"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
