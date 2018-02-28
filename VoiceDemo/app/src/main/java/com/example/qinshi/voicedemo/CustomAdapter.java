@@ -37,10 +37,11 @@ public class CustomAdapter extends RecyclerView.Adapter {
         CustomDataEntity entity = dataList.get(position);
         ViewHolder viewHolder = (ViewHolder) holder;
         viewHolder.itemView.setKeyText(entity.getName());
-        if(null != resultMap && null != resultMap.get(entity.getKey())) {
+        if(null != resultMap && resultMap.size() > 0 && null != resultMap.get(entity.getKey())) {
             entity.setValue(resultMap.get(entity.getKey()).getValue());
         }
         if(TextUtils.isEmpty(entity.getValue())){
+            viewHolder.itemView.setValue("");
             viewHolder.itemView.setHintValue(entity.getValueHint());
         }else {
             viewHolder.itemView.setValue(entity.getValue());

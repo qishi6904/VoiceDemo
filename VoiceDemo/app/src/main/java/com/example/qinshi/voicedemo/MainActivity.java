@@ -39,12 +39,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn;
     private TextView textView;
 
+    private boolean isRequesting = false;
     private EventListener eventListener;
 //    private String inputJson = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"accept-audio-volume\":true,\"pid\":15361,\"decoder\":0,\"vad_endpoint_timeout\":1000}";
     private String inputJson = "{\"accept-audio-data\":false," +
                                 "\"disable-punctuation\":false," +
                                 "\"accept-audio-volume\":false," +
-                                "\"pid\":1537}";
+                                "\"pid\":15361}";
     private Map<String, ResultEntity> resultMap = new HashMap<>();
 
     private static final int finishInitBaiDu = 1001;  //语音引擎就绪
@@ -70,7 +71,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(MainActivity.this, "请求失败", Toast.LENGTH_LONG).show();
                     break;
                 case requestSuccess:
-                    adapter.notifyDataSetChanged();
+                    if(msg.arg1 > 0) {
+                        adapter.notifyDataSetChanged();
+                    }
                     dismissLoadingDialog();
                     break;
             }
@@ -106,6 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onFailure(Call call, IOException e) {
                 handler.sendEmptyMessage(requestFailed);
+                isRequesting = false;
             }
 
             @Override
@@ -116,11 +120,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ReturnEntity returnEntity = gson.fromJson(result, ReturnEntity.class);
                 if(null != returnEntity && "200".equals(returnEntity.getRetCode())){
                     List<ResultEntity> dataList = returnEntity.getRetData();
-                    resultMap = dealResultData(dataList);
-                    handler.sendEmptyMessage(requestSuccess);
+                    Message msg = Message.obtain();
+                    msg.what = requestSuccess;
+                    if(dataList.size() > 0) {
+                        resultMap.clear();
+                        resultMap = dealResultData(dataList);
+                        msg.arg1 = dataList.size();
+                    }else {
+                        msg.arg1 = 0;
+                    }
+                    handler.sendMessage(msg);
                 }else {
                     handler.sendEmptyMessage(requestFailed);
                 }
+                isRequesting = false;
             }
         });
     }
@@ -211,7 +224,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }else if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_FINISH)){
                     // 识别结束
-//                    dismissLoadingDialog();
+                    if(!isRequesting){
+                        dismissLoadingDialog();
+                    }
                 }else if (name.equals(SpeechConstant.CALLBACK_EVENT_ASR_PARTIAL)) {
                     if(!TextUtils.isEmpty(params) && BaiDuVoiceUtils.isFinalResult(params)) {
                         String result = BaiDuVoiceUtils.getFinalResult(params);
@@ -220,6 +235,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Log.e("params: ", result);
 
                         request("http://192.168.62.234:8889/api/nlp/createOpportunity/baseInfo?spellingText=" + result);
+                        isRequesting = true;
                     }
                 }
             }
