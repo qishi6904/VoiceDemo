@@ -80,4 +80,12 @@ public class BaiDuVoiceUtils {
         }
         return "";
     }
+
+    public static void release(EventListener eventListener){
+        if(null != eventManager) {
+            eventManager.unregisterListener(eventListener);
+            eventManager.send(SpeechConstant.ASR_CANCEL, "{}", null, 0, 0);
+            eventManager = null;
+        }
+    }
 }

@@ -3,6 +3,8 @@ package com.example.qinshi.voicedemo;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,6 +19,7 @@ import android.widget.TextView;
 import com.baidu.speech.EventListener;
 import com.baidu.speech.asr.SpeechConstant;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,13 +27,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private LoadingDialog loadingDialog;
     private Button btn;
+
+    private EventListener eventListener;
 //    private String inputJson = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"accept-audio-volume\":true,\"pid\":15361,\"decoder\":0,\"vad_endpoint_timeout\":1000}";
     private String inputJson = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"accept-audio-volume\":false,\"pid\":1536}";
+
+    private static final int finishInitBaiDu = 1001;
+    private DealHandler handler = new DealHandler(this);
+    private class DealHandler extends Handler {
+
+        WeakReference<MainActivity> activityWeakReference;
+        DealHandler(MainActivity activityWeakReference){
+            this.activityWeakReference = new WeakReference<>(activityWeakReference);
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case finishInitBaiDu:
+                    if(null != loadingDialog) {
+                        loadingDialog.setText("请输入语音...");
+                    }
+                    break;
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        BaiDuVoiceUtils.init(this);
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rlv);
         btn = (Button) findViewById(R.id.btn);
@@ -87,14 +115,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         dataList.add(new CustomDataEntity("电话", "请填写电话"));
         dataList.add(new CustomDataEntity("意向车系", "请填写意向车系"));
         dataList.add(new CustomDataEntity("意向车型", "请填写意向车型"));
-        dataList.add(new CustomDataEntity("车型代码", "请填写车型代码"));
+        dataList.add(new CustomDataEntity("外饰颜色", "请填写外饰颜色"));
+        dataList.add(new CustomDataEntity("内饰颜色", "请填写内饰颜色"));
+        dataList.add(new CustomDataEntity("选装包", "请填写选装包"));
         dataList.add(new CustomDataEntity("购买区分", "请填写购买区分"));
         dataList.add(new CustomDataEntity("购买性质", "请填写购买性质"));
         return dataList;
     }
 
     private void registerEventListener(){
-        BaiDuVoiceUtils.registerEventListener(new EventListener() {
+        eventListener = new EventListener() {
             @Override
             public void onEvent(String name, String params, byte[] data, int offset, int length) {
 
@@ -102,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_READY)){
                     // 引擎就绪，可以说话，一般在收到此事件后通过UI通知用户可以说话了
-                    showLoadingDialog("请输入语音...");
+                    handler.sendEmptyMessage(finishInitBaiDu);
                 } else if (name.equals(SpeechConstant.CALLBACK_EVENT_ASR_END)) {
                     // 检测到用户的已经停止说话
                     if(null != loadingDialog) {
@@ -118,15 +148,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
             }
-        });
+        };
+        BaiDuVoiceUtils.registerEventListener(eventListener);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        BaiDuVoiceUtils.release(eventListener);
         if(null != loadingDialog) {
             loadingDialog.dismiss();
         }
+        loadingDialog = null;
     }
 
     @Override
@@ -141,10 +174,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 @Override
                                 public void onGranted() {
                                     BaiDuVoiceUtils.sendEvent(SpeechConstant.ASR_START, inputJson);
+                                    showLoadingDialog("启动中，请稍候...");
                                 }
                             }, null);
                 }else {
                     BaiDuVoiceUtils.sendEvent(SpeechConstant.ASR_START, inputJson);
+                    showLoadingDialog("启动中，请稍候...");
                 }
                 break;
         }
@@ -157,6 +192,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case PermissionUtils.REQUEST_AUDIO_RECORD_PERMISSION:
                 if (Manifest.permission.RECORD_AUDIO.equals(permissions[0]) && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     BaiDuVoiceUtils.sendEvent(SpeechConstant.ASR_START, inputJson);
+                    showLoadingDialog("启动中，请稍候...");
                 }
                 break;
         }
