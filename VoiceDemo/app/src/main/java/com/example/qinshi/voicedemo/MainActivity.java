@@ -230,15 +230,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else if (name.equals(SpeechConstant.CALLBACK_EVENT_ASR_PARTIAL)) {
                     if(!TextUtils.isEmpty(params) && BaiDuVoiceUtils.isFinalResult(params)) {
                         String result = BaiDuVoiceUtils.getFinalResult(params);
-                        List<String> numStrList = StringUtils.getMatchStrings("[一二三四五六七八九十]*点[一二三四五六七八九十]*", result);
+                        List<String> numStrList = StringUtils.getMatchStrings("[一二三四五六七八九零]*点[一二三四五六七八九零]*", result);
                         if(null != numStrList && numStrList.size() > 0) {
                             result = StringUtils.transformNumStrListToNumStr(numStrList, result);
                         }
                         textView.setText("结果： " + result);
                         Log.e("params: ", result);
 
-                        request("http://192.168.62.234:8889/api/nlp/createOpportunity/baseInfo?spellingText=" + result);
-                        isRequesting = true;
+                        dismissLoadingDialog();
+
+//                        request("http://192.168.62.234:8889/api/nlp/createOpportunity/baseInfo?spellingText=" + result);
+//                        isRequesting = true;
                     }
                 }
             }
