@@ -51,4 +51,12 @@ public class LoadingDialog extends Dialog {
     public void setOnFinishClickListener(OnFinishClickListener listener) {
         this.onFinishClickListener = listener;
     }
+
+    public void setButtonVisibility(boolean isVisibility) {
+        if(isVisibility) {
+            button.setVisibility(View.VISIBLE);
+        }else {
+            button.setVisibility(View.GONE);
+        }
+    }
 }

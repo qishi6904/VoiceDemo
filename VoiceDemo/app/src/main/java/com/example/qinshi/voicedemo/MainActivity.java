@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case finishInitBaiDu:
                     if(null != loadingDialog) {
                         loadingDialog.setText("请输入语音...");
+                        loadingDialog.setButtonVisibility(true);
                     }
                     break;
             }
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void showLoadingDialog(String text) {
+    private void showLoadingDialog(String text, boolean isShowButton) {
         if(null == loadingDialog) {
             loadingDialog = new LoadingDialog(this);
             loadingDialog.setOnFinishClickListener(new LoadingDialog.OnFinishClickListener() {
@@ -94,10 +95,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     BaiDuVoiceUtils.sendEvent(SpeechConstant.ASR_STOP, null);
                     if(null != loadingDialog) {
                         loadingDialog.setText("识别中，请稍候...");
+                        loadingDialog.setButtonVisibility(false);
                     }
                 }
             });
         }
+        loadingDialog.setButtonVisibility(isShowButton);
         loadingDialog.setText(text);
         loadingDialog.show();
     }
@@ -137,6 +140,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // 检测到用户的已经停止说话
                     if(null != loadingDialog) {
                         loadingDialog.setText("识别中，请稍候...");
+                        loadingDialog.setButtonVisibility(false);
                     }
                 }else if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_FINISH)){
                     // 识别结束
@@ -174,12 +178,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 @Override
                                 public void onGranted() {
                                     BaiDuVoiceUtils.sendEvent(SpeechConstant.ASR_START, inputJson);
-                                    showLoadingDialog("启动中，请稍候...");
+                                    showLoadingDialog("启动中，请稍候...", false);
                                 }
                             }, null);
                 }else {
                     BaiDuVoiceUtils.sendEvent(SpeechConstant.ASR_START, inputJson);
-                    showLoadingDialog("启动中，请稍候...");
+                    showLoadingDialog("启动中，请稍候...", false);
                 }
                 break;
         }
@@ -192,7 +196,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case PermissionUtils.REQUEST_AUDIO_RECORD_PERMISSION:
                 if (Manifest.permission.RECORD_AUDIO.equals(permissions[0]) && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     BaiDuVoiceUtils.sendEvent(SpeechConstant.ASR_START, inputJson);
-                    showLoadingDialog("启动中，请稍候...");
+                    showLoadingDialog("启动中，请稍候...", false);
                 }
                 break;
         }
