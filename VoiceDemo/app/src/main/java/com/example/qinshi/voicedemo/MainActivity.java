@@ -235,6 +235,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             loadingDialog.dismiss();
         }
         loadingDialog = null;
+        if(null != handler) {
+            handler.removeCallbacksAndMessages(null);
+        }
     }
 
     @Override
