@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by qinshi on 2/27/2018.
@@ -16,10 +17,13 @@ public class CustomAdapter extends RecyclerView.Adapter {
 
     private Context context;
     private List<CustomDataEntity> dataList;
+    private Map<String, ResultEntity> resultMap;
 
-    public CustomAdapter(Context context, List<CustomDataEntity> dataList) {
+    public CustomAdapter(Context context, List<CustomDataEntity> dataList,
+                         Map<String, ResultEntity> resultMap) {
         this.context = context;
         this.dataList = dataList;
+        this.resultMap = resultMap;
     }
 
     @Override
@@ -32,7 +36,10 @@ public class CustomAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         CustomDataEntity entity = dataList.get(position);
         ViewHolder viewHolder = (ViewHolder) holder;
-        viewHolder.itemView.setKeyText(entity.getKey());
+        viewHolder.itemView.setKeyText(entity.getName());
+        if(null != resultMap && null != resultMap.get(entity.getKey())) {
+            entity.setValue(resultMap.get(entity.getKey()).getValue());
+        }
         if(TextUtils.isEmpty(entity.getValue())){
             viewHolder.itemView.setHintValue(entity.getValueHint());
         }else {

@@ -15,32 +15,47 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baidu.speech.EventListener;
 import com.baidu.speech.asr.SpeechConstant;
+import com.google.gson.Gson;
 
+import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private CustomAdapter adapter;
     private LoadingDialog loadingDialog;
     private Button btn;
+    private TextView textView;
 
     private EventListener eventListener;
 //    private String inputJson = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"accept-audio-volume\":true,\"pid\":15361,\"decoder\":0,\"vad_endpoint_timeout\":1000}";
-    private String inputJson = "{\"accept-audio-data\":false,\"disable-punctuation\":false,\"accept-audio-volume\":false,\"pid\":1536}";
+    private String inputJson = "{\"accept-audio-data\":false," +
+                                "\"disable-punctuation\":false," +
+                                "\"accept-audio-volume\":false," +
+                                "\"pid\":1537}";
+    private Map<String, ResultEntity> resultMap = new HashMap<>();
 
-    private static final int finishInitBaiDu = 1001;
+    private static final int finishInitBaiDu = 1001;  //语音引擎就绪
+    private static final int requestFailed = 1002;    //请求分词接口失败
+    private static final int requestSuccess = 1003;   //请求分词接口成功
     private DealHandler handler = new DealHandler(this);
     private class DealHandler extends Handler {
-
         WeakReference<MainActivity> activityWeakReference;
         DealHandler(MainActivity activityWeakReference){
             this.activityWeakReference = new WeakReference<>(activityWeakReference);
         }
-
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -49,6 +64,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         loadingDialog.setText("请输入语音...");
                         loadingDialog.setButtonVisibility(true);
                     }
+                    break;
+                case requestFailed:
+                    dismissLoadingDialog();
+                    Toast.makeText(MainActivity.this, "请求失败", Toast.LENGTH_LONG).show();
+                    break;
+                case requestSuccess:
+                    adapter.notifyDataSetChanged();
+                    dismissLoadingDialog();
                     break;
             }
         }
@@ -63,29 +86,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.rlv);
         btn = (Button) findViewById(R.id.btn);
+        textView = (TextView) findViewById(R.id.result);
 
-        CustomAdapter adapter = new CustomAdapter(this, initData());
+        adapter = new CustomAdapter(this, initData(), resultMap);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
         btn.setOnClickListener(this);
 
         registerEventListener();
-
-//        HttpUtils.Get("http://www.hao123.com", new Callback() {
-//            @Override
-//            public void onFailure(Call call, IOException e) {
-//                Toast.makeText(MainActivity.this, "请求失败", Toast.LENGTH_LONG).show();
-//            }
-//
-//            @Override
-//            public void onResponse(Call call, Response response) throws IOException {
-//                Log.e("ee", response.body().toString());
-//            }
-//        });
-
     }
 
+    /**
+     * 请求分词接口
+     * @param path
+     */
+    private void request(String path) {
+        HttpUtils.Get(path, new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                handler.sendEmptyMessage(requestFailed);
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                String result = response.body().string();
+                Log.e("ee", result);
+                Gson gson = new Gson();
+                ReturnEntity returnEntity = gson.fromJson(result, ReturnEntity.class);
+                if(null != returnEntity && "200".equals(returnEntity.getRetCode())){
+                    List<ResultEntity> dataList = returnEntity.getRetData();
+                    resultMap = dealResultData(dataList);
+                    handler.sendEmptyMessage(requestSuccess);
+                }else {
+                    handler.sendEmptyMessage(requestFailed);
+                }
+            }
+        });
+    }
+
+    /**
+     * 显示加载对话框
+     * @param text
+     * @param isShowButton
+     */
     private void showLoadingDialog(String text, boolean isShowButton) {
         if(null == loadingDialog) {
             loadingDialog = new LoadingDialog(this);
@@ -105,27 +149,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loadingDialog.show();
     }
 
+    /**
+     * 关闭加载对话框
+     */
     private void dismissLoadingDialog() {
         if(null != loadingDialog && loadingDialog.isShowing()) {
             loadingDialog.dismiss();
         }
     }
 
+    /**
+     * 初始化数据
+     * @return
+     */
     private List<CustomDataEntity> initData() {
         List<CustomDataEntity> dataList = new ArrayList<>();
-        dataList.add(new CustomDataEntity("姓名", "请填写姓名"));
-        dataList.add(new CustomDataEntity("性别", "请填写性别"));
-        dataList.add(new CustomDataEntity("电话", "请填写电话"));
-        dataList.add(new CustomDataEntity("意向车系", "请填写意向车系"));
-        dataList.add(new CustomDataEntity("意向车型", "请填写意向车型"));
-        dataList.add(new CustomDataEntity("外饰颜色", "请填写外饰颜色"));
-        dataList.add(new CustomDataEntity("内饰颜色", "请填写内饰颜色"));
-        dataList.add(new CustomDataEntity("选装包", "请填写选装包"));
-        dataList.add(new CustomDataEntity("购买区分", "请填写购买区分"));
-        dataList.add(new CustomDataEntity("购买性质", "请填写购买性质"));
+        dataList.add(new CustomDataEntity("姓名", "NAME", "请填写姓名"));
+        dataList.add(new CustomDataEntity("性别", "SEX", "请填写性别"));
+        dataList.add(new CustomDataEntity("电话", "TEL", "请填写电话"));
+        dataList.add(new CustomDataEntity("意向车系", "SERIES", "请填写意向车系"));
+        dataList.add(new CustomDataEntity("意向车型", "MODEL", "请填写意向车型"));
+        dataList.add(new CustomDataEntity("外饰颜色", "COLOR_OUT", "请填写外饰颜色"));
+        dataList.add(new CustomDataEntity("内饰颜色", "COLOR_IN", "请填写内饰颜色"));
+        dataList.add(new CustomDataEntity("选装包", "OPTIONAL_PACKAGE", "请填写选装包"));
+        dataList.add(new CustomDataEntity("购买区分", "DIFFERENTIATE", "请填写购买区分"));
+        dataList.add(new CustomDataEntity("购买性质", "PROPERTY", "请填写购买性质"));
         return dataList;
     }
 
+    /**
+     * 加分词接口返回的数据，转成Map方便读取
+     * @param resultList
+     * @return
+     */
+    private Map<String, ResultEntity> dealResultData(List<ResultEntity> resultList) {
+        for(int i = 0; i < resultList.size(); i++) {
+            ResultEntity entity = resultList.get(i);
+            resultMap.put(entity.getKey(), entity);
+        }
+        return resultMap;
+    }
+
+    /**
+     * 注册语音识别的事件监听
+     */
     private void registerEventListener(){
         eventListener = new EventListener() {
             @Override
@@ -144,11 +211,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }else if(name.equals(SpeechConstant.CALLBACK_EVENT_ASR_FINISH)){
                     // 识别结束
-                    dismissLoadingDialog();
+//                    dismissLoadingDialog();
                 }else if (name.equals(SpeechConstant.CALLBACK_EVENT_ASR_PARTIAL)) {
                     if(!TextUtils.isEmpty(params) && BaiDuVoiceUtils.isFinalResult(params)) {
-                        Log.e("params: ", BaiDuVoiceUtils.getFinalResult(params));
-                        dismissLoadingDialog();
+                        String result = BaiDuVoiceUtils.getFinalResult(params);
+                        result = result.replaceAll( "[，|。|！|?|,|!|?]" , "");
+                        textView.setText("结果： " + result);
+                        Log.e("params: ", result);
+
+                        request("http://192.168.62.234:8889/api/nlp/createOpportunity/baseInfo?spellingText=" + result);
                     }
                 }
             }

@@ -5,39 +5,50 @@ package com.example.qinshi.voicedemo;
  */
 
 public class CustomDataEntity {
-    private String Key;
-    private String Value;
+    private String key;
+    private String name;
+    private String value;
     private String valueHint;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public CustomDataEntity() {
 
     }
 
-    public CustomDataEntity(String key, String valueHint) {
-        Key = key;
+    public CustomDataEntity(String name, String key, String valueHint) {
+        this.key = key;
+        this.name = name;
         this.valueHint = valueHint;
     }
 
-    public CustomDataEntity(String key, String value, String valueHint) {
-        Key = key;
-        Value = value;
+    public CustomDataEntity(String name, String key, String value, String valueHint) {
+        this.key = key;
+        this.name = name;
+        this.value = value;
         this.valueHint = valueHint;
     }
 
     public String getKey() {
-        return Key;
+        return key;
     }
 
     public void setKey(String key) {
-        Key = key;
+        this.key = key;
     }
 
     public String getValue() {
-        return Value;
+        return value;
     }
 
     public void setValue(String value) {
-        Value = value;
+        this.value = value;
     }
 
     public String getValueHint() {
