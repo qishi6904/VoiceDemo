@@ -237,10 +237,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         textView.setText("结果： " + result);
                         Log.e("params: ", result);
 
-                        dismissLoadingDialog();
-
-//                        request("http://192.168.62.234:8889/api/nlp/createOpportunity/baseInfo?spellingText=" + result);
-//                        isRequesting = true;
+                        request("http://192.168.62.234:8889/api/nlp/createOpportunity/baseInfo?spellingText=" + result);
+                        isRequesting = true;
                     }
                 }
             }
